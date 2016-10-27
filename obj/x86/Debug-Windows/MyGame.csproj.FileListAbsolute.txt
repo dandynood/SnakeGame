@@ -1,0 +1,210 @@
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\animations\startup.txt
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\bundles\FileDialog.txt
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\bundles\splash.txt
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\fonts\arial.ttf
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\fonts\cour.ttf
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\fdFile.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\fdFolder.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\sounds\error.wav
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\SwinGame.icns
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\Resources\SwinGame.ico
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\MyGame.exe
+C:\Users\FU\Documents\Projects\SwinGameXamarin\bin\Debug\SwinGame.dll
+C:\Users\FU\Documents\Projects\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\animations\startup.txt
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\bundles\FileDialog.txt
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\bundles\splash.txt
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\fonts\arial.ttf
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\fonts\cour.ttf
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\images\fdFile.png
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\images\fdFolder.png
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\sounds\error.wav
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\SwinGame.icns
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\Resources\SwinGame.ico
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\MyGame.exe
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\SwinGame.dll
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\nunit.framework.dll
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\nunit.framework.xml
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\nunit.core.dll
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\nunit.core.interfaces.dll
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\nunit.util.dll
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\NUnit.VisualStudio.TestAdapter.dll
+C:\Users\User\Desktop\OOP FIles\Week 2\SwinGameXamarin\bin\Debug\nunit.mocks.dll
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\animations\startup.txt
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\bundles\FileDialog.txt
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\bundles\splash.txt
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\fonts\arial.ttf
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\fonts\cour.ttf
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\images\fdFile.png
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\images\fdFolder.png
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\sounds\error.wav
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\SwinGame.icns
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\Resources\SwinGame.ico
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\MyGame.exe
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\nunit.framework.dll
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\SwinGame.dll
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\bin\Debug\nunit.framework.xml
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\OOP FIles\Week 2\Pass Task 6\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\animations\startup.txt
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\bundles\FileDialog.txt
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\bundles\splash.txt
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\fonts\arial.ttf
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\fonts\cour.ttf
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\images\fdFile.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\images\fdFolder.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\sounds\error.wav
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\SwinGame.icns
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\Resources\SwinGame.ico
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\MyGame.exe
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\nunit.framework.dll
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\SwinGame.dll
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 6\bin\Debug\nunit.framework.xml
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\animations\startup.txt
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\bundles\FileDialog.txt
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\bundles\splash.txt
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\fonts\arial.ttf
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\fonts\cour.ttf
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\images\fdFile.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\images\fdFolder.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\sounds\error.wav
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\SwinGame.icns
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\Resources\SwinGame.ico
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\MyGame.exe
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\nunit.framework.dll
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\SwinGame.dll
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\bin\Debug\nunit.framework.xml
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\OOP FIles\Week 3\Pass Task 9\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\animations\startup.txt
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\bundles\FileDialog.txt
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\bundles\splash.txt
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\fonts\arial.ttf
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\fonts\cour.ttf
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\images\fdFile.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\images\fdFolder.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\sounds\error.wav
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\SwinGame.icns
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\Resources\SwinGame.ico
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\MyGame.exe
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\nunit.framework.dll
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\SwinGame.dll
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\bin\Debug\nunit.framework.xml
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 9\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\animations\startup.txt
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\bundles\FileDialog.txt
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\bundles\splash.txt
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\fonts\arial.ttf
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\fonts\cour.ttf
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\images\fdFile.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\images\fdFolder.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\sounds\error.wav
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\SwinGame.icns
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\Resources\SwinGame.ico
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\MyGame.exe
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\nunit.framework.dll
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\SwinGame.dll
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\bin\Debug\nunit.framework.xml
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\OOP FIles\Week 4\Pass Task 11\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\animations\startup.txt
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\bundles\FileDialog.txt
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\bundles\splash.txt
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\fonts\arial.ttf
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\fonts\cour.ttf
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\images\fdFile.png
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\images\fdFolder.png
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\sounds\error.wav
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\SwinGame.icns
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\Resources\SwinGame.ico
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\MyGame.exe
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\nunit.framework.dll
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\SwinGame.dll
+C:\Users\User\Desktop\Pass Task 11\bin\Debug\nunit.framework.xml
+C:\Users\User\Desktop\Pass Task 11\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Pass Task 11\obj\x86\Debug-Windows\MyGame.exe
