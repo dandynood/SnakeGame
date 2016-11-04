@@ -10,5 +10,3 @@ script:    # the following commands are just examples, use whatever your build p
   - grep "Test Results" build.log
 after_script:
   - nunit-console Tests/bin/Release/Tests.dll
-  after_script:
-  - nunit-console Tests/bin/Release/Tests.dll
