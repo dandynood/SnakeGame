@@ -4,9 +4,11 @@ before_install:
   - sudo apt-get install nunit-console
 before_script:
   - nuget restore MyGame.sln
-  script:    # the following commands are just examples, use whatever your build process requires
+script:    # the following commands are just examples, use whatever your build process requires
   - ./build.sh
   - ./test.sh
   - grep "Test Results" build.log
 after_script:
+  - nunit-console Tests/bin/Release/Tests.dll
+  after_script:
   - nunit-console Tests/bin/Release/Tests.dll
