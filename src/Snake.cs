@@ -49,7 +49,7 @@ namespace MyGame
 			if(d == DirectionEnum.Up)
 			{
 				_snakeParts.RemoveAt (_snakeParts.Count - 1);
-				_snakeParts.Insert(0, _head)
+				_snakeParts.Insert (0, _head);
 
 			}
 			else if(d == DirectionEnum.Down)
