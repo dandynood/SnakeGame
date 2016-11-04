@@ -1,12 +1,11 @@
 language: csharp
-solution: MyGame.sln
+script:
+  - xbuild /p:Configuration=Debug MyGame.sln
 before_install:
   - sudo apt-get install nunit-console
 before_script:
-  - nuget restore MyGame.sln
-script:
-  - xbuild /p:Configuration=Debug MyGame.sln
+  - nuget restore solution-name.sln
 after_script:
-  - nunit-console Tests/bin/Release/Tests.dll
+  - nunit-console Tests/bin/Debug/Tests.dll
 notifications:
   slack: swe20001group2:7Z4qqXmTceNgbUT3UqZ7P6fc
