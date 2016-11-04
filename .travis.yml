@@ -10,3 +10,5 @@ script:    # the following commands are just examples, use whatever your build p
   - grep "Test Results" build.log
 after_script:
   - nunit-console Tests/bin/Release/Tests.dll
+notifications:
+  slack: swe20001group2:7Z4qqXmTceNgbUT3UqZ7P6fc
