@@ -72,6 +72,7 @@
     <Compile Include="src\Level.cs" />
     <Compile Include="src\SnakePart.cs" />
     <Compile Include="src\DirectionEnum.cs" />
+    <Compile Include="src\Wall.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">

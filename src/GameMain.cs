@@ -21,6 +21,18 @@ namespace MyGame
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.White);
 
+				//DrawWalls levels
+				Level LVL=new Level();
+
+				//Draw Level 1
+				//LVL.Drawlevel1();
+
+				//Draw Level 2
+				//LVL.Drawlevel2();
+
+				//LVL.Drawlevel3
+				//LVL.Drawlevel3();
+
                 SwinGame.DrawFramerate(0,0);
 
 				// Has to go after ClearScreen and NOT before refreshscreen
