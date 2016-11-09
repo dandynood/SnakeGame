@@ -114,9 +114,9 @@ namespace MyGame
 			else if (SwinGame.KeyDown (KeyCode.vk_s) && (_direction == DirectionEnum.Right || _direction == DirectionEnum.Left))
 			{
 				_direction = DirectionEnum.Down;
-			}*/
+			}
 				
-		}
+		}*/
 			
 	}
 }
