@@ -9,27 +9,27 @@ namespace MyGame
 		List<SnakePart> _snakeParts = new List<SnakePart> ();
 		SnakePart _head = new SnakePart();
 
-		private const int TileWidth = 15;
-		private const int TileHeight = 15;
+		private const int TileWidth = 25;
+		private const int TileHeight = 25;
 
-		private const int GridWidth = 15;
-		private const int GridHeight = 15;
 
-		private int _length;
+		private int _lengthcount;
 		private DirectionEnum _direction;
 
 		public Snake ()
 		{
-			_length = 0;
+			_lengthcount = 0;
 			_head.color = Color.Red;
+			_head.X = 20;
+			_head.Y = 10;
 			_snakeParts.Add (_head);
 			_direction = DirectionEnum.Left;
 		}
 
 		public int Lenght
 		{
-			get { return _length; }
-			set { _length = value; }
+			get { return _lengthcount; }
+			set { _lengthcount = value; }
 		}
 
 		public List<SnakePart> SnakeParts
@@ -38,38 +38,85 @@ namespace MyGame
 			set { _snakeParts = value; }
 		}
 
+		public SnakePart Head
+		{
+			get{ return _head; }
+		}
+
 		public DirectionEnum Direction
 		{
 			get { return _direction; }
 			set { _direction = value; }
 		}
 
-		public void MoveForward(DirectionEnum d)
+		public void MoveForward()
 		{	
-			if(d == DirectionEnum.Up)
-			{
-				_snakeParts.RemoveAt (_snakeParts.Count - 1);
-				_snakeParts.Insert (0, _head);
+			int index = _snakeParts.Count - 1;
 
+			if(_direction == DirectionEnum.Up)
+			{
+				_snakeParts.RemoveAt(index);
+				_snakeParts.Insert(0, new SnakePart(_head.X, _head.Y-1));
+				_head.Y--;
 			}
-			else if(d == DirectionEnum.Down)
+			else if(_direction == DirectionEnum.Down)
 			{
-
+				_snakeParts.RemoveAt(index);
+				_snakeParts.Insert(0, new SnakePart(_head.X, _head.Y+1));
+				_head.Y++;
 			}
-			else if(d == DirectionEnum.Right)
+			else if(_direction == DirectionEnum.Right)
 			{
-
+				_snakeParts.RemoveAt(index);
+				_snakeParts.Insert(0, new SnakePart(_head.X+1, _head.Y));
+				_head.X++;
 			}
-			else if(d == DirectionEnum.Left)
+			else if(_direction == DirectionEnum.Left)
 			{
+				_snakeParts.RemoveAt(index);
+				_snakeParts.Insert(0, new SnakePart(_head.X-1, _head.Y));
+				_head.X--;
+			}
+				
 
+		}
+
+		public void Draw()
+		{
+			SwinGame.FillRectangle (_head.color, _head.X * TileWidth, _head.Y * TileHeight, TileWidth, TileHeight);
+			for (int i = 1; i < _snakeParts.Count; i++)
+			{
+				SwinGame.FillRectangle (_snakeParts [i].color, _snakeParts [i].X * TileWidth, _snakeParts [i].Y * TileHeight, TileWidth, TileHeight);
 			}
 		}
 
 		public void IncreaseLenght()
 		{
-			
+			int index = _snakeParts.Count - 1;
+			_snakeParts.Add( new SnakePart(_snakeParts[index].X, _snakeParts[index].Y));
+			_lengthcount++;
 		}
+
+		/*public void HandleSnakeInput()
+		{
+			if (SwinGame.KeyDown (KeyCode.vk_a) && (_direction == DirectionEnum.Up || _direction == DirectionEnum.Down))
+			{
+				_direction = DirectionEnum.Left;
+			}
+			else if (SwinGame.KeyDown (KeyCode.vk_d) && (_direction == DirectionEnum.Up || _direction == DirectionEnum.Down))
+			{
+				_direction = DirectionEnum.Right;
+			}
+			else if (SwinGame.KeyDown (KeyCode.vk_w) && (_direction == DirectionEnum.Right || _direction == DirectionEnum.Left))
+			{
+				_direction = DirectionEnum.Up;
+			}
+			else if (SwinGame.KeyDown (KeyCode.vk_s) && (_direction == DirectionEnum.Right || _direction == DirectionEnum.Left))
+			{
+				_direction = DirectionEnum.Down;
+			}
+				
+		}*/
 			
 	}
 }
