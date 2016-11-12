@@ -76,6 +76,9 @@
     <Compile Include="src\Fruit.cs" />
     <Compile Include="src\Wall.cs" />
     <Compile Include="src\GameState.cs" />
+    <Compile Include="src\MenuController.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
