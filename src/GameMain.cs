@@ -1,6 +1,5 @@
 using System;
 using SwinGameSDK;
-using System.Windows.Forms;
 
 namespace MyGame
 {
@@ -11,12 +10,8 @@ namespace MyGame
 
             //Open the game window
             SwinGame.OpenGraphicsWindow("GameMain", 800, 600);
-           // SwinGame.ShowSwinGameSplashScreen();
-
-			GameController control = new GameController ();
-
-			control.Initialized ();
-
+            SwinGame.ShowSwinGameSplashScreen();
+            
             //Run the game loop
             while(false == SwinGame.WindowCloseRequested())
             {
@@ -28,13 +23,11 @@ namespace MyGame
 
                 SwinGame.DrawFramerate(0,0);
 
-
-				control.PlayGame ();
-
-
 				// Has to go after ClearScreen and NOT before refreshscreen
+
+
                 //Draw onto the screen
-				SwinGame.RefreshScreen(60);
+                SwinGame.RefreshScreen(60);
 
 
 

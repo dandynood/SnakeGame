@@ -51,33 +51,27 @@ namespace MyGame
 
 		public void MoveForward()
 		{	
-			int index = _snakeParts.Count - 1;
-
-			if(_direction == DirectionEnum.Up)
+			
+			if (_direction == DirectionEnum.Up)
 			{
-				_snakeParts.RemoveAt(index);
-				_snakeParts.Insert(0, new SnakePart(_head.X, _head.Y-1));
+
 				_head.Y--;
 			}
-			else if(_direction == DirectionEnum.Down)
+			else if (_direction == DirectionEnum.Down)
 			{
-				_snakeParts.RemoveAt(index);
-				_snakeParts.Insert(0, new SnakePart(_head.X, _head.Y+1));
+
 				_head.Y++;
 			}
-			else if(_direction == DirectionEnum.Right)
+			else if (_direction == DirectionEnum.Right)
 			{
-				_snakeParts.RemoveAt(index);
-				_snakeParts.Insert(0, new SnakePart(_head.X+1, _head.Y));
+
 				_head.X++;
 			}
-			else if(_direction == DirectionEnum.Left)
+			else if (_direction == DirectionEnum.Left)
 			{
-				_snakeParts.RemoveAt(index);
-				_snakeParts.Insert(0, new SnakePart(_head.X-1, _head.Y));
+
 				_head.X--;
 			}
-				
 
 		}
 

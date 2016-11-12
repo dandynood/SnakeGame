@@ -68,17 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\GameMain.cs" />
-    <Compile Include="src\Snake.cs" />
     <Compile Include="src\Level.cs" />
     <Compile Include="src\SnakePart.cs" />
     <Compile Include="src\DirectionEnum.cs" />
-    <Compile Include="src\GameController.cs" />
-    <Compile Include="src\Fruit.cs" />
-    <Compile Include="src\Wall.cs" />
-    <Compile Include="src\GameState.cs" />
-    <Compile Include="src\MenuController.cs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
+    <Compile Include="TestSnakeClass.cs" />
+    <Compile Include="src\Snake.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -89,7 +83,6 @@
     <Reference Include="nunit.framework">
       <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\animations\startup.txt">
