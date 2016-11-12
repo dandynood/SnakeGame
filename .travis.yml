@@ -7,6 +7,6 @@ before_install:
 before_script:
   - nuget restore MyGame.sln
 after_script:
-  - nunit-console Tests/bin/Debug/Tests.dll
+  - nunit-console bin/Debug/Tests.dll
 notifications:
   slack: swe20001group2:7Z4qqXmTceNgbUT3UqZ7P6fc
