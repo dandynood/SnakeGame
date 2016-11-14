@@ -76,6 +76,7 @@
     <Compile Include="src\Fruit.cs" />
     <Compile Include="src\Wall.cs" />
     <Compile Include="src\GameState.cs" />
+    <Compile Include="TestFruit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
