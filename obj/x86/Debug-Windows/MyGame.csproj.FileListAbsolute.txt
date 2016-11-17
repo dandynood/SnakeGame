@@ -234,3 +234,9 @@ C:\Users\User\SnakeGame\bin\Debug\MyGame.exe
 C:\Users\User\SnakeGame\bin\Debug\nunit.framework.dll
 C:\Users\User\SnakeGame\bin\Debug\SwinGame.dll
 C:\Users\User\SnakeGame\bin\Debug\nunit.framework.xml
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Playtext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Quittext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Settingstext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Easytext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Hardtext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Mediumtext.png

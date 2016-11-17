@@ -5,16 +5,24 @@ namespace MyGame
 {
 	public class GameController
 	{
-		GameState currentState;
-		Snake s;
-		Level level;
-		Fruit f;
-		int delay = 250;
-		int time = 250;
+		private GameState currentState;
+		private Snake s;
+		private MenuController menu;
+		private Level level;
+		private Fruit f;
+		private int delay = 400;
+		private int time = 400;
+
 
 		public GameController ()
 		{
-
+			f = new Fruit ();
+			level = new Level ();
+			s = new Snake ();
+			menu = new MenuController ();
+			menu.SettingSelected = 2;
+			currentState = GameState.ViewingMenu;
+			f.GenerateRan ();
 
 		}
 
@@ -37,45 +45,128 @@ namespace MyGame
 			set{ currentState = value; }
 		}
 
-		public void Initialized()
+		public void Initialized(float x, float y, DirectionEnum d)
 		{
-			f = new Fruit ();
-			level = new Level ();
-			s = new Snake ();
-			currentState = GameState.Level0;
-			f.GenerateRan ();
+			s.Head.X = x;
+			s.Head.Y = y;
 
-			s.Head.X = 5;
-			s.Head.Y = 5;
-
-			s.IncreaseLenght ();
-			s.IncreaseLenght ();
-			s.IncreaseLenght ();
-			s.IncreaseLenght ();
-			s.IncreaseLenght ();
-			s.IncreaseLenght ();
-			s.IncreaseLenght ();
-
-			s.Direction = DirectionEnum.Right;
+			s.Direction = d;
 		}
 
 		public void PlayGame()
 		{
-			f.Draw ();
-			level.Drawlevel2 ();
-			s.Draw ();
+			//Viewing the menu where the title, buttons are drawn.
+			if (currentState == GameState.ViewingMenu)
+			{
+				menu.DrawButton ();
+				menu.DrawTitle ();
 
-			System.Timers.Timer timer = new System.Timers.Timer (delay);
-			timer.AutoReset = false;
-			timer.Elapsed += (sender, e) => s.MoveForward ();
-			timer.Start ();
+				System.Timers.Timer timer2 = new System.Timers.Timer(delay);
+				timer2.AutoReset = false;
+				timer2.Elapsed += (sender, e) => menu.MoveTitle ();
+				timer2.Start ();
 
-			HandleUserInput ();
+				menu.HandleUserInputMenu ();
+	
 
-			SnakeCheckWall ();
-			SnakeCheckFruit();
+				if (menu.OptionSelected == 1)
+				{
+					timer2.Stop ();
+					delay = time;
+					SwinGame.Delay (400);
+					currentState = GameState.Level1;
+				}
+				else if (menu.OptionSelected == 2)
+				{
+					menu.DrawSettings ();
+				}
+				else if (menu.OptionSelected == 3)
+				{
+					currentState = GameState.QuitProgram;
+				}
+				else if (menu.OptionSelected == 4)
+				{
+					menu.SettingSelected = 1;
+					time = 400;
+					delay = 400;
+					menu.DrawSettings ();
+					menu.ResetTitle ();
+					menu.OptionSelected = 0;
+				}
+				else if (menu.OptionSelected == 5)
+				{
+					menu.SettingSelected = 2;
+					time = 150;
+					delay = 150;
+					menu.DrawSettings ();
+					menu.ResetTitle ();
+					menu.OptionSelected = 0;
+				}
+				else if (menu.OptionSelected == 6)
+				{
+					menu.SettingSelected = 3;
+					time = 50;
+					delay = 50;
+					menu.DrawSettings ();
+					menu.ResetTitle ();
+					menu.OptionSelected = 0;
+				}
 
-			delay += time;
+				delay += time;
+									
+			}
+			else if (currentState == GameState.Level1)
+			{
+				f.Draw ();
+				level.Drawlevel1 ();
+				s.Draw ();
+
+				System.Timers.Timer timer = new System.Timers.Timer(delay);
+				timer.AutoReset = false;
+				timer.Elapsed += (sender, e) => s.MoveForward ();
+				timer.Start ();
+
+				HandleUserInput ();
+
+				delay += time;
+				SnakeCheckWall ();
+				SnakeCheckFruit ();
+			}
+			else if (currentState == GameState.Level2)
+			{
+				f.Draw ();
+				level.Drawlevel2 ();
+				s.Draw ();
+
+				System.Timers.Timer timer = new System.Timers.Timer(delay);
+				timer.AutoReset = false;
+				timer.Elapsed += (sender, e) => s.MoveForward ();
+				timer.Start ();
+
+				HandleUserInput ();
+
+				delay += time;
+				SnakeCheckWall ();
+				SnakeCheckFruit ();
+			}
+			else if (currentState == GameState.Level3)
+			{
+				f.Draw ();
+				level.Drawlevel3 ();
+				s.Draw ();
+
+				System.Timers.Timer timer = new System.Timers.Timer(delay);
+				timer.AutoReset = false;
+				timer.Elapsed += (sender, e) => s.MoveForward ();
+				timer.Start ();
+
+				HandleUserInput ();
+
+				delay += time;
+				SnakeCheckWall ();
+				SnakeCheckFruit ();
+			}
+
 		}
 
 		public void SnakeCheckWall()
