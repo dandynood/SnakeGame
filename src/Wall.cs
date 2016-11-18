@@ -1,11 +1,12 @@
-﻿using System;
-using SwinGameSDK;
+﻿using SwinGameSDK;
 using System.Collections.Generic;
 
 namespace MyGame
 {
 	public class Wall
 	{
+
+
 		//Tile's area
 		private const int TileWidth  = 25;
 		private const int TileHeight = 25;
@@ -19,36 +20,36 @@ namespace MyGame
 		private int wall1_lenght= 6;
 
 		//Corner Wall
-		private int wall3_x=1;
-		private int wall3_y=0;
-		private int wall3_width1=6;
-		private int wall3_width2=1;
-		private int wall3_lenght1=1;
-		private int wall3_lenght2=6;
+		public int wall3_x=1;
+		public int wall3_y=0;
+		public int wall3_width1=6;
+		public int  wall3_width2=1;
+		public int  wall3_lenght1=1;
+		public int  wall3_lenght2=6;
 
-		private int wall4_x=25;
-		private int wall4_y=0;
-		private int wall4_w=30;
-		private int wall4_width1=6;
-		private int wall4_width2=1;
-		private int wall4_lenght1=1;
-		private int wall4_lenght2=6;
+		public int  wall4_x=25;
+		public int  wall4_y=0;
+		public int  wall4_w=30;
+		public int  wall4_width1=6;
+		public int  wall4_width2=1;
+		public int  wall4_lenght1=1;
+		public int  wall4_lenght2=6;
 
-		private int wall5_x=1;
-		private int wall5_y=18;
-		private int wall5_w=23;
-		private int wall5_width1=6;
-		private int wall5_width2=1;
-		private int wall5_lenght1=1;
-		private int wall5_lenght2=6;
+		public int  wall5_x=1;
+		public int  wall5_y=18;
+		public int  wall5_w=23;
+		public int  wall5_width1=6;
+		public int  wall5_width2=1;
+		public int  wall5_lenght1=1;
+		public int  wall5_lenght2=6;
 
-		private int wall6_x=25;
-		private int wall6_y=18;
-		private int wall6_w=23;
-		private int wall6_width1=6;
-		private int wall6_width2=1;
-		private int wall6_lenght1=1;
-		private int wall6_lenght2=6;
+		public int  wall6_x=25;
+		public int  wall6_y=18;
+		public int  wall6_w=23;
+		public int  wall6_width1=6;
+		public int  wall6_width2=1;
+		public int  wall6_lenght1=1;
+		public int  wall6_lenght2=6;
 
 		public Wall(){
 		}
@@ -90,7 +91,10 @@ namespace MyGame
 		{
 			SwinGame.FillRectangle (Color.Grey, wall1_x*TileWidth, wall1_y*TileHeight, TileWidth*wall1_width, TileHeight*wall1_lenght);
 
+
+
 		}
+
 
 
 		//draw wall 2

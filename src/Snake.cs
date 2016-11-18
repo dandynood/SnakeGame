@@ -97,6 +97,11 @@ namespace MyGame
 			_lengthcount++;
 		}
 
+		public void ResetSnake()
+		{
+			_snakeParts.RemoveRange (0, _snakeParts.Count- 1);
+		}
+
 		/*public void HandleSnakeInput()
 		{
 			if (SwinGame.KeyDown (KeyCode.vk_a) && (_direction == DirectionEnum.Up || _direction == DirectionEnum.Down))

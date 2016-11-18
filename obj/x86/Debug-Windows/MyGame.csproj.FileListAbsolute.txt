@@ -240,3 +240,5 @@ C:\Users\User\SnakeGame\bin\Debug\Resources\images\Settingstext.png
 C:\Users\User\SnakeGame\bin\Debug\Resources\images\Easytext.png
 C:\Users\User\SnakeGame\bin\Debug\Resources\images\Hardtext.png
 C:\Users\User\SnakeGame\bin\Debug\Resources\images\Mediumtext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Credits.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Music.png

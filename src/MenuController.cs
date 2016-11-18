@@ -115,33 +115,39 @@ namespace MyGame
 				i = Selected(SwinGame.PointAt(SwinGame.MouseX (), SwinGame.MouseY ()));
 			}
 		}
-
+	
 		public int Selected(Point2D pt)
 		{
 			if (SwinGame.PointInRect (pt, 13 * TileWidth, 240, 5 * TileWidth, TileHeight+5))
 			{
+				//play
 				return 1;
 			}
 			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 365, 5 * TileWidth, TileHeight+5))
 			{
+				//settings
 				return 2;
 			}
 			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 490, 5 * TileWidth, TileHeight+5))
 			{
+				//quit
 				return 3;
 			}
 			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 365, 5 * TileWidth, TileHeight) && i == 2)
 			{
+				//easy
 				y = 1;
 				return 4;
 			}
 			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 405, 5 * TileWidth, TileHeight) && i == 2)
 			{
+				//mediuum
 				y = 2;
 				return 5;
 			}
 			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 450, 5 * TileWidth, TileHeight) && i == 2)
 			{
+				//medium
 				y = 3;
 				return 6;
 			}
@@ -193,6 +199,7 @@ namespace MyGame
 			k1.Draw ();
 			k2.Draw ();
 		}
+
 		public void MoveTitle()
 		{
 
