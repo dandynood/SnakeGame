@@ -49,12 +49,6 @@ namespace MyGame
 			s.Head.Y = 5;
 
 			s.IncreaseLenght ();
-			s.IncreaseLenght ();
-			s.IncreaseLenght ();
-			s.IncreaseLenght ();
-			s.IncreaseLenght ();
-			s.IncreaseLenght ();
-			s.IncreaseLenght ();
 
 			s.Direction = DirectionEnum.Right;
 		}
@@ -83,9 +77,15 @@ namespace MyGame
 
 		}
 
+		//Check the fruit and when it is eaten, snake will increase length and at the same time fruit relocation
 		public void SnakeCheckFruit()
 		{
-
+			//Created for the sprint work 
+			if (s.Head.X == f.X && s.Head.Y == f.Y)
+			{
+				s.IncreaseLenght ();
+				f.GenerateRan ();
+			}
 		}
 
 		public void HandleUserInput ()
