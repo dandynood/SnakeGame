@@ -15,10 +15,8 @@ namespace MyGame
 
 			GameController control = new GameController ();
 
-			control.Initialized ();
-
             //Run the game loop
-            while(false == SwinGame.WindowCloseRequested())
+			while (!(SwinGame.WindowCloseRequested() == true | control.CurrentState == GameState.QuitProgram))
             {
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
@@ -31,13 +29,9 @@ namespace MyGame
 
 				control.PlayGame ();
 
-
 				// Has to go after ClearScreen and NOT before refreshscreen
                 //Draw onto the screen
 				SwinGame.RefreshScreen(60);
-
-
-
 
             }
         }

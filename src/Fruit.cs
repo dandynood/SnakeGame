@@ -56,8 +56,8 @@ namespace MyGame
 		public void GenerateRan()
 		{
 			Random rnd = new Random();
-			_x = (rnd.Next (0, 32));
-			_y = (rnd.Next (0, 24));
+			_x = (rnd.Next (0, 31));
+			_y = (rnd.Next (0, 23));
 		}
 
 		//Methods of Drawing the fruit
