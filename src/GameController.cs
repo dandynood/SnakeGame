@@ -11,14 +11,18 @@ namespace MyGame
 		Fruit f;
 		int delay = 250;
 		int time = 250;
+		int counter=0;
+		const int Counter_Left= 375;
+		const int Counter_Top=0;
 
 		public GameController ()
+		{}
+
+		public int Count
 		{
-
-
+			get{return counter;}
+			set{counter = value;}
 		}
-
-
 		public int Delay
 		{
 			get{ return delay; }
@@ -44,7 +48,8 @@ namespace MyGame
 			s = new Snake ();
 			currentState = GameState.Level0;
 			f.GenerateRan ();
-
+		
+			counter = 0;
 			s.Head.X = 5;
 			s.Head.Y = 5;
 
@@ -59,11 +64,13 @@ namespace MyGame
 			s.Direction = DirectionEnum.Right;
 		}
 
+
 		public void PlayGame()
 		{
 			f.Draw ();
-			level.Drawlevel2 ();
+			level.Drawlevel0 ();
 			s.Draw ();
+			//Counter ();
 
 			System.Timers.Timer timer = new System.Timers.Timer (delay);
 			timer.AutoReset = false;
@@ -74,6 +81,8 @@ namespace MyGame
 
 			SnakeCheckWall ();
 			SnakeCheckFruit();
+			GameStateControl ();
+
 
 			delay += time;
 		}
@@ -113,6 +122,37 @@ namespace MyGame
 
 		}
 
+		//edit by Reuben
+		public void Counter()
+		{
+			if(SnakeCheckFruit = true )
+			{
+				counter++;
+			}
+
+			//Count = string.Format ("{0}", counter);
+		}
+
+		public void GameStateControl()
+		{
+			if (counter > 20)
+			{
+				level.Drawlevel1();
+			}
+			else if (counter > 50)
+			{
+				level.Drawlevel2();
+			}
+			else if (counter > 100)
+			{
+				level.Drawlevel3();
+			}
+		}
+			
+		public void DrawCounter()
+		{
+			SwinGame.DrawText (("count"),Color.Blue,Counter_Left,Counter_Top);
+		}
 
 
 		/*	public void SnakeCheckWalls(Snake s)

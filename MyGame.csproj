@@ -76,6 +76,8 @@
     <Compile Include="src\Fruit.cs" />
     <Compile Include="src\Wall.cs" />
     <Compile Include="src\GameState.cs" />
+    <Compile Include="src\DrawWallTest.cs" />
+    <Compile Include="src\GameResources.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -83,10 +85,10 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="nunit.framework">
       <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\animations\startup.txt">

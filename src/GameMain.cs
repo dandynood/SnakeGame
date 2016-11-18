@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace MyGame
 {
-    public class GameMain
+	public class GameMain
     {
         public static void Main()
         {
@@ -28,6 +28,11 @@ namespace MyGame
 
                 SwinGame.DrawFramerate(0,0);
 
+				//Draw counter
+				GameController count = new GameController ();
+
+				count.DrawCounter();
+		
 
 				control.PlayGame ();
 

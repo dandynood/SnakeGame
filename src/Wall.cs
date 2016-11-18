@@ -7,11 +7,11 @@ namespace MyGame
 	public class Wall
 	{
 		//Tile's area
-		private const int TileWidth  = 25;
+		public const int TileWidth  = 25;
 		private const int TileHeight = 25;
 
 		//strait wall
-		private float wall1_x = 14;
+		public static float wall1_x = 14;
 		private float wall1_y = 8;
 		private float wall2_x = 18;
 		private float wall2_y = 8;
