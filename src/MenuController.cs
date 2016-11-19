@@ -9,6 +9,7 @@ namespace MyGame
 		private const int TileHeight = 25;
 		private int i;
 		private int y;
+		private int mute=0;
 		private Snake s = new Snake();
 		private Snake n = new Snake();
 		private Snake a = new Snake();
@@ -93,7 +94,7 @@ namespace MyGame
 
 			if (y == 1)
 			{
-				SwinGame.DrawText ("Easy", Color.Red, 14 * TileWidth + 10, 11 * TileHeight);
+				SwinGame.DrawText ("Easy", Color.Red, 14 * TileWidth + 20, 11 * TileHeight);
 			}
 			else if (y == 2)
 			{
@@ -101,7 +102,7 @@ namespace MyGame
 			}
 			else if (y == 3)
 			{
-				SwinGame.DrawText ("Hard", Color.Red, 14 * TileWidth + 10, 11 * TileHeight);
+				SwinGame.DrawText ("Hard", Color.Red, 14 * TileWidth + 20, 11 * TileHeight);
 			}
 			//SwinGame.DrawText ("Settings", Color.Red, 360, 15 * TileHeight);
 			//SwinGame.DrawText ("Quit", Color.Red, 375, 20 * TileHeight);
@@ -113,6 +114,53 @@ namespace MyGame
 			if (SwinGame.MouseClicked (MouseButton.LeftButton))
 			{
 				i = Selected(SwinGame.PointAt(SwinGame.MouseX (), SwinGame.MouseY ()));
+			}
+		}
+
+		public void HandleUserInputPauseMenu()
+		{
+			if (SwinGame.MouseClicked (MouseButton.LeftButton))
+			{
+				i = PauseSelected(SwinGame.PointAt(SwinGame.MouseX (), SwinGame.MouseY ()));
+			}
+		}
+
+		public int PauseSelected(Point2D pt)
+		{
+			if (SwinGame.PointInRect (pt, 13 * TileWidth, 240, 5 * TileWidth, TileHeight + 5))
+			{
+				//resume
+				return 8;
+			}
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 364, 5 * TileWidth, TileHeight + 5))
+			{
+				//end gam
+				return 9;
+			}
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 490, 5 * TileWidth, TileHeight + 5))
+			{
+				//quit
+				return 3;
+			}
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 302, 5 * TileWidth, TileHeight + 5))
+			{
+				//mute
+				if (mute == 0)
+				{
+					SwinGame.PauseMusic ();
+					mute = 1;
+				}
+				//unmute
+				else if(mute == 1)
+				{
+					SwinGame.ResumeMusic ();
+					mute = 0;
+				}
+				return 0;
+			}
+			else
+			{
+				return 0;
 			}
 		}
 	
@@ -198,6 +246,55 @@ namespace MyGame
 			a1.Draw ();
 			k1.Draw ();
 			k2.Draw ();
+		}
+
+		public void DrawTitleInvert()
+		{
+			s.DrawInvert ();
+			n.DrawInvert ();
+			a.DrawInvert ();
+			k.DrawInvert ();
+			e.DrawInvert ();
+			e1.DrawInvert ();
+
+			a1.DrawInvert ();
+			k1.DrawInvert ();
+			k2.DrawInvert ();
+		}
+
+		public void DrawPauseButtons()
+		{
+			if (mute == 1)
+			{
+				SwinGame.FillRectangle (Color.Blue, 13 * TileWidth - 2, 302 - 2, (5 * TileWidth) + 4, TileWidth + 9);
+			}
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 240, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 302, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 364, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 490, 5*TileWidth, TileHeight+5);
+
+			SwinGame.DrawBitmap ("Resume.png", 14*TileWidth, 10*TileHeight-10);
+			SwinGame.DrawBitmap ("mute.png", 360, 12*TileHeight+5);
+			SwinGame.DrawBitmap ("End game.png", 340, 15*TileHeight-10);
+			SwinGame.DrawBitmap ("Quittext.png", 360, 20*TileHeight-10);
+
+		}
+
+		public void DrawPauseButtonsInvert()
+		{
+			if (mute == 1)
+			{
+				SwinGame.FillRectangle (Color.White, 13 * TileWidth - 2, 302 - 2, (5 * TileWidth) + 4, TileWidth + 9);
+			}
+				SwinGame.FillRectangle (Color.Red, 13 * TileWidth, 240, 5*TileWidth, TileHeight+5);
+				SwinGame.FillRectangle (Color.Red, 13 * TileWidth, 302, 5*TileWidth, TileHeight+5);
+				SwinGame.FillRectangle (Color.Red, 13 * TileWidth, 364, 5*TileWidth, TileHeight+5);
+				SwinGame.FillRectangle (Color.Red, 13 * TileWidth, 490, 5*TileWidth, TileHeight+5);
+
+				SwinGame.DrawBitmap ("Resume.png", 14*TileWidth, 10*TileHeight-10);
+				SwinGame.DrawBitmap ("mute.png", 360, 12*TileHeight+5);
+				SwinGame.DrawBitmap ("End game.png", 340, 15*TileHeight-10);
+				SwinGame.DrawBitmap ("Quittext.png", 360, 20*TileHeight-10);
 		}
 
 		public void MoveTitle()
@@ -350,6 +447,7 @@ namespace MyGame
 		
 
 		}
+			
 
 		public void ResetTitle()
 		{

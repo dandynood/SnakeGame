@@ -84,9 +84,44 @@ namespace MyGame
 		public void Draw()
 		{
 			SwinGame.FillRectangle (_head.color, _head.X * TileWidth, _head.Y * TileHeight, TileWidth, TileHeight);
+
 			for (int i = 1; i < _snakeParts.Count; i++)
 			{
 				SwinGame.FillRectangle (_snakeParts [i].color, _snakeParts [i].X * TileWidth, _snakeParts [i].Y * TileHeight, TileWidth, TileHeight);
+			}
+
+		}
+
+		public void DrawInvert()
+		{
+			SwinGame.FillRectangle (_head.color, _head.X * TileWidth, _head.Y * TileHeight, TileWidth, TileHeight);
+
+			for (int i = 1; i < _snakeParts.Count; i++)
+			{
+				SwinGame.FillRectangle (Color.White, _snakeParts [i].X * TileWidth, _snakeParts [i].Y * TileHeight, TileWidth, TileHeight);
+			}
+
+		}
+
+		public void DrawWin()
+		{
+			SwinGame.FillRectangle (SwinGame.RandomColor(), _head.X * TileWidth, _head.Y * TileHeight, TileWidth, TileHeight);
+
+			for (int i = 1; i < _snakeParts.Count; i++)
+			{
+				SwinGame.FillRectangle (SwinGame.RandomColor(), _snakeParts [i].X * TileWidth, _snakeParts [i].Y * TileHeight, TileWidth, TileHeight);
+			}
+		}
+
+		public void DrawGameOverEyes ()
+		{
+			if(_direction == DirectionEnum.Up || _direction == DirectionEnum.Down)
+			{
+				SwinGame.DrawBitmap ("eyes.png", _head.X*TileWidth-13, _head.Y*TileHeight);
+			}
+			else if(_direction == DirectionEnum.Right || _direction == DirectionEnum.Left)
+			{
+				SwinGame.DrawBitmap ("eyesupdown.png", _head.X*TileWidth, _head.Y*TileHeight-13);
 			}
 		}
 

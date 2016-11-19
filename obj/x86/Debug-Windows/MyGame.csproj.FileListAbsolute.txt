@@ -242,3 +242,36 @@ C:\Users\User\SnakeGame\bin\Debug\Resources\images\Hardtext.png
 C:\Users\User\SnakeGame\bin\Debug\Resources\images\Mediumtext.png
 C:\Users\User\SnakeGame\bin\Debug\Resources\images\Credits.png
 C:\Users\User\SnakeGame\bin\Debug\Resources\images\Music.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\End game.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Resume.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\pausetext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\go.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Level.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\level1.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\one.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\three.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\two.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\apple.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\applegreen.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\cherry.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\mango.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\peach.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\strawberry.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\watermellon.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\orange.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\gameover.gif
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\eyes.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\eyesupdown.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\level2.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\level3.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevel.gif
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevel0.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevel1.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevel2.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevel3.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevel50.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevelgo.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevelslash.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\level0.gif
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\megalovania snake.mp3
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\mute.png
