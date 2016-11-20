@@ -12,16 +12,16 @@ namespace MyGame
 		private Level level;
 		private Fruit f;
 		Wall w;
-		private int delay = 100;
-		private int time = 100;
-		private int resetsetting = 100;
+		private int delay = 80;
+		private int time = 80;
+		private int resetsetting = 80;
 		private int delaytitle = 80;
 		private int timetitle = 80;
 		int counter=0;
 		float vol = 0.4F;
-		int level1limit = 20;
-		int level2limit = 25;
-		int level3limit = 35;
+		int level1limit = 25;
+		int level2limit = 35;
+		int level3limit = 40;
 		int level0limit = 50;
 
  		const int Counter_Left= 375;
@@ -40,6 +40,11 @@ namespace MyGame
 			currentState = GameState.ViewingMenu;
 			f.GenerateRan ();
 			SwinGame.LoadMusic ("megalovania snake.mp3");
+			SwinGame.LoadMusic ("Eternal Shrine Maiden.mp3");
+			SwinGame.LoadMusic ("Maple Dream.mp3");
+			SwinGame.LoadMusic ("game over.mp3");
+			SwinGame.LoadMusic ("Lotus Land.mp3");
+			SwinGame.LoadMusic ("Selene Light.mp3");
 
 			timer.Interval = delay;
 			timer2.Interval = delaytitle;
@@ -85,6 +90,7 @@ namespace MyGame
 			//Viewing the menu where the title, buttons are drawn.
 			if (currentState == GameState.ViewingMenu)
 			{
+				SwinGame.DrawBitmap ("menubackground.png", 0, 0);
 				menu.DrawButton ();
 				menu.DrawTitle ();
 
@@ -102,6 +108,7 @@ namespace MyGame
 					s.Direction = DirectionEnum.Right;
 					currentState = GameState.AnnouceGame;
 					previouState = GameState.Level1;
+					SwinGame.FadeMusicOut (2500);
 					menu.OptionSelected = 0;		
 				}
 				else if (menu.OptionSelected == 2)
@@ -115,9 +122,9 @@ namespace MyGame
 				else if (menu.OptionSelected == 4)
 				{
 					menu.SettingSelected = 1;
-					time = 150;
-					delay = 150;
-					resetsetting = 150;
+					time = 100;
+					delay = 100;
+					resetsetting = 100;
 					timer.Interval = delay;
 					menu.DrawSettings ();
 					menu.ResetTitle ();
@@ -126,9 +133,9 @@ namespace MyGame
 				else if (menu.OptionSelected == 5)
 				{
 					menu.SettingSelected = 2;
-					time = 100;
-					delay = 100;
-					resetsetting = 100;
+					time = 80;
+					delay = 80;
+					resetsetting = 70;
 					timer.Interval = delay;
 					menu.DrawSettings ();
 					menu.ResetTitle ();
@@ -162,7 +169,7 @@ namespace MyGame
 				}
 				else if (previouState == GameState.Level3)
 				{
-					SwinGame.ClearScreen (Color.Wheat);
+					SwinGame.ClearScreen (Color.Gold);
 					level.Drawlevel3 ();
 				}
 
@@ -200,6 +207,8 @@ namespace MyGame
 				else if (menu.OptionSelected == 9)
 				{
 					SwinGame.StopMusic ();
+					SwinGame.SetMusicVolume (1F);
+					SwinGame.PlayMusic ("Lotus Land.mp3");
 					currentState = GameState.ViewingMenu;
 					menu.ResetTitle ();
 					s.ResetSnake ();
@@ -248,7 +257,7 @@ namespace MyGame
 			}
 			else if (currentState == GameState.Level3)
 			{
-				SwinGame.ClearScreen (Color.Wheat);
+				SwinGame.ClearScreen (Color.Gold);
 				level.Drawlevel3 ();
 				s.Draw ();
 				f.Draw ();
@@ -270,7 +279,7 @@ namespace MyGame
 				if (counter >= 10 && counter < 20 && currentState == GameState.Level0)
 				{
 					level.DrawInvertLevel1 ();
-					SnakeCheckWallLevel1 ();
+				    SnakeCheckWallLevel1 ();
 				}
 				else if (counter >= 20 && counter < 30 &&currentState == GameState.Level0)
 				{
@@ -318,7 +327,7 @@ namespace MyGame
 				}
 				else if (previouState == GameState.Level3)
 				{
-					SwinGame.ClearScreen (Color.Wheat);
+					SwinGame.ClearScreen (Color.Gold);
 					level.Drawlevel3 ();
 					s.Draw ();
 					s.DrawGameOverEyes ();
@@ -339,7 +348,8 @@ namespace MyGame
 					}
 				}
 					counter = 0;
-					delay = time;
+				    delay = resetsetting;
+				    time = resetsetting;
 					delaytitle = timetitle;
 					HandleUserGameOverInput ();
 			}
@@ -372,6 +382,22 @@ namespace MyGame
 						SwinGame.Delay (500);
 						i++;
 						SwinGame.RefreshScreen (60);
+					}
+
+					if (previouState == GameState.Level1)
+					{
+						SwinGame.SetMusicVolume (0.7F);
+						SwinGame.PlayMusic ("Selene Light.mp3");
+					}
+					else if (previouState == GameState.Level2)
+					{
+						SwinGame.SetMusicVolume (0.7F);
+						SwinGame.PlayMusic ("Eternal Shrine Maiden.mp3");
+					}
+					else if (previouState == GameState.Level3)
+					{
+						SwinGame.SetMusicVolume (0.8F);
+						SwinGame.PlayMusic ("Alice Maestra.mp3");
 					}
 				}
 				else if (previouState == GameState.Level0)
@@ -409,11 +435,11 @@ namespace MyGame
 					}
 					else if (previouState == GameState.Level2)
 					{
-						SwinGame.DrawBitmap ("level2.png", 8 * 25, 8 * 25);
+						SwinGame.DrawBitmap ("level2.png", 17 * 25, 2 * 25);
 					}
 					else if (previouState == GameState.Level3)
 					{
-						SwinGame.DrawBitmap ("level3.png", 8 * 25, 8 * 25);
+						SwinGame.DrawBitmap ("level3.png", 17 * 25, 2 * 25);
 					}
 				}
 				else if (i == 2)
@@ -657,6 +683,7 @@ namespace MyGame
 		{
 			if (counter == level1limit && currentState == GameState.Level1)
 			{
+				SwinGame.FadeMusicOut (2500);
 				SwinGame.Delay (2000);
 				counter = 0;
 				s.ResetSnake ();
@@ -670,6 +697,7 @@ namespace MyGame
 			}
 			else if (counter == level2limit && currentState == GameState.Level2)
 			{
+				SwinGame.FadeMusicOut (2500);
 				SwinGame.Delay (2000);
 				counter = 0;
 				s.ResetSnake ();
@@ -683,6 +711,8 @@ namespace MyGame
 			}
 			else if (counter == level3limit && currentState == GameState.Level3)
 			{
+				SwinGame.FadeMusicOut (2500);
+				SwinGame.Delay (2000);
 				counter = 0;
 				s.ResetSnake ();
 				s.Head.X = 15;
@@ -722,10 +752,12 @@ namespace MyGame
 			}
 			else if (previouState == GameState.Level0 && currentState == GameState.GameOver)
 			{
+				SwinGame.SetMusicVolume (1F);
 				SwinGame.PlayMusic ("horrordrone.mp3");
 			}
 			else if (previouState != GameState.Level0 && currentState == GameState.GameOver)
 			{
+				SwinGame.SetMusicVolume (1F);
 				SwinGame.PlayMusic ("game over.mp3", 0);
 			}
 		}
@@ -803,6 +835,7 @@ namespace MyGame
 			{
 				currentState = GameState.ViewingMenu;
 				SwinGame.StopMusic ();
+				SwinGame.PlayMusic ("Lotus Land.mp3");
 				menu.ResetTitle ();
 				s.ResetSnake ();
 			}

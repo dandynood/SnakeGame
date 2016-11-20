@@ -8,13 +8,13 @@
       <File FileName="src\Level.cs" Line="1" Column="1" />
       <File FileName="src\SnakePart.cs" Line="1" Column="1" />
       <File FileName="src\DirectionEnum.cs" Line="1" Column="1" />
-      <File FileName="src\GameController.cs" Line="734" Column="27" />
+      <File FileName="src\GameController.cs" Line="282" Column="6" />
       <File FileName="src\Fruit.cs" Line="1" Column="1" />
       <File FileName="..\Desktop\MenuController.cs" Line="1" Column="1" />
       <File FileName="src\GameState.cs" Line="1" Column="1" />
       <File FileName="..\..\..\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" Line="1" Column="1" />
       <File FileName="src\Wall.cs" Line="1" Column="1" />
-      <File FileName="src\MenuController.cs" Line="1" Column="1" />
+      <File FileName="src\MenuController.cs" Line="150" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
