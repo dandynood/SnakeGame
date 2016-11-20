@@ -13,7 +13,6 @@ namespace MyGame
             SwinGame.OpenGraphicsWindow("GameMain", 800, 600);
            // SwinGame.ShowSwinGameSplashScreen();
 			GameController control = new GameController ();
-
             //Run the game loop
 			while (!(SwinGame.WindowCloseRequested() == true || control.CurrentState == GameState.QuitProgram))
             {

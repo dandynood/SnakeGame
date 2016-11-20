@@ -275,3 +275,8 @@ C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevelslash.png
 C:\Users\User\SnakeGame\bin\Debug\Resources\images\level0.gif
 C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\megalovania snake.mp3
 C:\Users\User\SnakeGame\bin\Debug\Resources\images\mute.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\horrordrone.mp3
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\crash.wav
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\bump.aiff
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\Maple Dream.mp3
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\game over.mp3

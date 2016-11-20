@@ -3,18 +3,18 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="src\GameController.cs">
     <Files>
       <File FileName="packages.config" Line="1" Column="1" />
-      <File FileName="src\GameMain.cs" Line="36" Column="32" />
-      <File FileName="src\Snake.cs" Line="116" Column="34" />
+      <File FileName="src\GameMain.cs" Line="1" Column="1" />
+      <File FileName="src\Snake.cs" Line="1" Column="1" />
       <File FileName="src\Level.cs" Line="1" Column="1" />
       <File FileName="src\SnakePart.cs" Line="1" Column="1" />
       <File FileName="src\DirectionEnum.cs" Line="1" Column="1" />
       <File FileName="src\GameController.cs" Line="734" Column="27" />
-      <File FileName="src\Fruit.cs" Line="60" Column="28" />
+      <File FileName="src\Fruit.cs" Line="1" Column="1" />
       <File FileName="..\Desktop\MenuController.cs" Line="1" Column="1" />
-      <File FileName="src\GameState.cs" Line="21" Column="15" />
+      <File FileName="src\GameState.cs" Line="1" Column="1" />
       <File FileName="..\..\..\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" Line="1" Column="1" />
       <File FileName="src\Wall.cs" Line="1" Column="1" />
-      <File FileName="src\MenuController.cs" Line="284" Column="4" />
+      <File FileName="src\MenuController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
