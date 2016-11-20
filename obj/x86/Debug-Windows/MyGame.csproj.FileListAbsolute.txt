@@ -234,3 +234,67 @@ C:\Users\User\SnakeGame\bin\Debug\MyGame.exe
 C:\Users\User\SnakeGame\bin\Debug\nunit.framework.dll
 C:\Users\User\SnakeGame\bin\Debug\SwinGame.dll
 C:\Users\User\SnakeGame\bin\Debug\nunit.framework.xml
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\animations\startup.txt
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\bundles\FileDialog.txt
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\bundles\splash.txt
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\fonts\arial.ttf
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\fonts\cour.ttf
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\images\fdFile.png
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\images\fdFolder.png
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\sounds\error.wav
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\SwinGame.icns
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\Resources\SwinGame.ico
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\MyGame.exe
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\mscorlib.dll
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\nunit.framework.dll
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\SwinGame.dll
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\nunit.framework.xml
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\normidna.nlp
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\normnfc.nlp
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\normnfd.nlp
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\normnfkc.nlp
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\bin\Debug\normnfkd.nlp
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\SnakeGame-master 2 - Copy\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\animations\startup.txt
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\bundles\FileDialog.txt
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\bundles\splash.txt
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\fonts\arial.ttf
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\fonts\cour.ttf
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\images\fdFile.png
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\images\fdFolder.png
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\sounds\error.wav
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\SwinGame.icns
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\Resources\SwinGame.ico
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\MyGame.exe
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\mscorlib.dll
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\nunit.framework.dll
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\SwinGame.dll
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\nunit.framework.xml
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\normidna.nlp
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\normnfc.nlp
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\normnfd.nlp
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\normnfkc.nlp
+C:\Users\ASUS\Desktop\sprint2\bin\Debug\normnfkd.nlp
+C:\Users\ASUS\Desktop\sprint2\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\sprint2\obj\x86\Debug-Windows\MyGame.exe

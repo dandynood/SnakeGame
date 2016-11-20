@@ -17,6 +17,8 @@ namespace MyGame
 
 			DWall.DrawWall1 ();
 			DWall.DrawWall2 ();
+
+
 		}
 
 		//Draw Level 2 map

@@ -14,6 +14,7 @@ namespace MyGame
 			_x = x;
 			_y = y;
 			_color = Color.Black;
+
 		}
 
 		public SnakePart() : this (0, 0)
