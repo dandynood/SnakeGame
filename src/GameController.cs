@@ -781,7 +781,7 @@ namespace MyGame
 				SwinGame.StopMusic ();
 				SwinGame.Delay (2000);
 				int i = 0;
-				SwinGame.SetMusicVolume (0.7F);
+				SwinGame.SetMusicVolume (0.9F);
 				SwinGame.PlayMusic ("Maple Dream.mp3");
 				menu.ResetTitle ();
 				while (i < 15)
