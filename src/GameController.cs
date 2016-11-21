@@ -417,7 +417,7 @@ namespace MyGame
 					}
 					else if (previouState == GameState.Level3)
 					{
-						SwinGame.SetMusicVolume (0.8F);
+						SwinGame.SetMusicVolume (1F);
 						SwinGame.PlayMusic ("Alice Maestra.mp3");
 					}
 				}
