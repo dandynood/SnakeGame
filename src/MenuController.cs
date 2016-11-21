@@ -9,10 +9,7 @@ namespace MyGame
 		private const int TileHeight = 25;
 		private int i;
 		private int y;
-<<<<<<< HEAD
 		private int mute=0;
-=======
->>>>>>> origin
 		private Snake s = new Snake();
 		private Snake n = new Snake();
 		private Snake a = new Snake();
@@ -71,14 +68,11 @@ namespace MyGame
 			set{ y = value; }
 		}
 
-<<<<<<< HEAD
 		public int Mute
 		{
 			get{ return mute; }
 		}
 
-=======
->>>>>>> origin
 		public void DrawButton()
 		{
 
@@ -88,7 +82,6 @@ namespace MyGame
 			}
 			else if (i == 2)
 			{
-<<<<<<< HEAD
 				SwinGame.FillRectangle (Color.Blue, 13 * TileWidth - 2, 365 - 2, (5 * TileWidth) + 4, TileWidth + 9);
 			}
 			else if (i == 3)
@@ -121,26 +114,6 @@ namespace MyGame
 			if (y == 1)
 			{
 				SwinGame.DrawText ("Easy", Color.Red, 14 * TileWidth + 20, 11 * TileHeight);
-=======
-				SwinGame.FillRectangle (Color.Blue, 13*TileWidth-2, 365-2, (5*TileWidth)+4, TileWidth+9);
-			}
-			else if (i == 3)
-			{
-				SwinGame.FillRectangle (Color.Blue, 13*TileWidth-2, 490-2, (5*TileWidth)+4, TileWidth+9);
-			}
-
-			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 240, 5*TileWidth, TileHeight+5);
-			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 365, 5*TileWidth, TileHeight+5);
-			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 490, 5*TileWidth, TileHeight+5);
-
-			SwinGame.DrawBitmap ("Playtext.png", 14*TileWidth+10, 10*TileHeight-10);
-			SwinGame.DrawBitmap ("Settingstext.png", 345, 15*TileHeight-10);
-			SwinGame.DrawBitmap ("Quittext.png", 360, 20*TileHeight-10);
-
-			if (y == 1)
-			{
-				SwinGame.DrawText ("Easy", Color.Red, 14 * TileWidth + 10, 11 * TileHeight);
->>>>>>> origin
 			}
 			else if (y == 2)
 			{
@@ -148,11 +121,7 @@ namespace MyGame
 			}
 			else if (y == 3)
 			{
-<<<<<<< HEAD
 				SwinGame.DrawText ("Hard", Color.Red, 14 * TileWidth + 20, 11 * TileHeight);
-=======
-				SwinGame.DrawText ("Hard", Color.Red, 14 * TileWidth + 10, 11 * TileHeight);
->>>>>>> origin
 			}
 			//SwinGame.DrawText ("Settings", Color.Red, 360, 15 * TileHeight);
 			//SwinGame.DrawText ("Quit", Color.Red, 375, 20 * TileHeight);
@@ -166,7 +135,6 @@ namespace MyGame
 				i = Selected(SwinGame.PointAt(SwinGame.MouseX (), SwinGame.MouseY ()));
 			}
 		}
-<<<<<<< HEAD
 
 		public void HandleUserInputPauseMenu()
 		{
@@ -214,8 +182,6 @@ namespace MyGame
 				return 0;
 			}
 		}
-=======
->>>>>>> origin
 	
 		public int Selected(Point2D pt)
 		{
@@ -229,11 +195,7 @@ namespace MyGame
 				//settings
 				return 2;
 			}
-<<<<<<< HEAD
 			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 530, 5 * TileWidth, TileHeight+5))
-=======
-			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 490, 5 * TileWidth, TileHeight+5))
->>>>>>> origin
 			{
 				//quit
 				return 3;
@@ -256,7 +218,6 @@ namespace MyGame
 				y = 3;
 				return 6;
 			}
-<<<<<<< HEAD
 			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 478, 5 * TileWidth, TileHeight + 5))
 			{
 				//Credits Author: Jacky
@@ -317,8 +278,6 @@ namespace MyGame
 				}
 				return 7;
 			}
-=======
->>>>>>> origin
 			else
 			{
 				return 0;
@@ -354,7 +313,6 @@ namespace MyGame
 			//SwinGame.DrawText ("Hard", Color.Red, 550, 435);
 		}
 
-<<<<<<< HEAD
 		public void DrawSettingMusic()
 		{
 			if (y == 4)
@@ -396,8 +354,6 @@ namespace MyGame
 			SwinGame.DrawBitmap ("Mute.png", 536, 475);
 		}
 
-=======
->>>>>>> origin
 		public void DrawTitle()
 		{
 			s.Draw ();
@@ -412,7 +368,6 @@ namespace MyGame
 			k2.Draw ();
 		}
 
-<<<<<<< HEAD
 		public void DrawTitleInvert()
 		{
 			s.DrawInvert ();
@@ -462,8 +417,6 @@ namespace MyGame
 				SwinGame.DrawBitmap ("Quittext.png", 360, 20*TileHeight-10);
 		}
 
-=======
->>>>>>> origin
 		public void MoveTitle()
 		{
 
@@ -614,10 +567,7 @@ namespace MyGame
 		
 
 		}
-<<<<<<< HEAD
 			
-=======
->>>>>>> origin
 
 		public void ResetTitle()
 		{

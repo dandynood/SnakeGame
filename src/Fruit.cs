@@ -59,10 +59,7 @@ namespace MyGame
 			Random rnd = new Random();
 			_x = (rnd.Next (0, 31));
 			_y = (rnd.Next (0, 23));
-<<<<<<< HEAD
 		     i = (rnd.Next (1, 7));
-=======
->>>>>>> origin
 		}
 
 		//Methods of Drawing the fruit
@@ -140,7 +137,7 @@ namespace MyGame
 		{
 			// Check for Wall 1
 
-			if (_x == w.Wall1x && _y >= w.Wall1y && _x <= w.Wall1y + w.wallLenght - 1) {
+			if (_x == w.Wall1x && _y >= w.Wall1y && _y <= w.Wall1y + w.wallLenght - 1) {
 
 				return true;
 
@@ -199,7 +196,7 @@ namespace MyGame
 
 				return true;
 
-			} else if (_x == w.wall4_w && _y >= w.wall6_y && _x <= w.wall6_y + w.wall6_lenght2 - 1) {
+			} else if (_x == w.wall4_w && _y >= w.wall6_y && _y <= w.wall6_y + w.wall6_lenght2 - 1) {
 
 				return true;
 			}

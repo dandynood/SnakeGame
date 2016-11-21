@@ -13,15 +13,9 @@ namespace MyGame
             SwinGame.OpenGraphicsWindow("GameMain", 800, 600);
            // SwinGame.ShowSwinGameSplashScreen();
 			GameController control = new GameController ();
-<<<<<<< HEAD
 			SwinGame.PlayMusic ("Lotus Land.mp3");
             //Run the game loop
 			while (!(SwinGame.WindowCloseRequested() == true || control.CurrentState == GameState.QuitProgram))
-=======
-
-            //Run the game loop
-			while (!(SwinGame.WindowCloseRequested() == true | control.CurrentState == GameState.QuitProgram))
->>>>>>> origin
             {
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
