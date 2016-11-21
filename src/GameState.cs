@@ -6,6 +6,8 @@ namespace MyGame
 	{
 		ViewingMenu,
 
+		ViewingCredit,
+
 		Level0,
 
 		Level1,

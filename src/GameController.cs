@@ -23,6 +23,8 @@ namespace MyGame
  		const int Counter_Left= 375;
 		const int Counter_Top=0;
 
+
+		private static Bitmap Credit;
 		public GameController ()
 		{
 			f = new Fruit ();
@@ -71,7 +73,7 @@ namespace MyGame
 				menu.DrawButton ();
 				menu.DrawTitle ();
 
-				System.Timers.Timer timer2 = new System.Timers.Timer(delaytitle);
+				System.Timers.Timer timer2 = new System.Timers.Timer (delaytitle);
 				timer2.AutoReset = false;
 				timer2.Elapsed += (sender, e) => menu.MoveTitle ();
 				timer2.Start ();
@@ -94,6 +96,33 @@ namespace MyGame
 				{
 					menu.DrawSettings ();
 				}
+
+				//When selected the credits button 
+				else if (menu.OptionSelected == 15)
+				{
+					currentState = GameState.ViewingCredit;
+					Credit= SwinGame.LoadBitmap (SwinGame.PathToResource ("snakecredit.png", ResourceKind.BitmapResource));
+
+					SwinGame.DrawBitmap(Credit, 0, 0);
+					SwinGame.RefreshScreen ();
+					SwinGame.Delay (3000);
+					SwinGame.ProcessEvents ();
+					GameMain.Main();
+
+				}
+
+				//This is the function and coordiates needed for the instruction image 
+				/*else if()
+				{
+					currentState = GameState.ViewingCredit;
+					Credit= SwinGame.LoadBitmap (SwinGame.PathToResource ("snakecredit.png", ResourceKind.BitmapResource));
+
+					SwinGame.DrawBitmap(Credit, 460, 245);
+					SwinGame.RefreshScreen ();
+					SwinGame.Delay (3000);
+					SwinGame.ProcessEvents ();
+					GameMain.Main();
+				}*/
 				else if (menu.OptionSelected == 3)
 				{
 					currentState = GameState.QuitProgram;
@@ -126,8 +155,10 @@ namespace MyGame
 					menu.OptionSelected = 0;
 				}
 				delaytitle += timetitle;
+
 								
 			}
+		
 			else if (currentState == GameState.Level1)
 			{
 				f.Draw ();
@@ -147,6 +178,7 @@ namespace MyGame
 				SnakeCheckSides ();
 				//SnakeCheckItself ();
 				GameStateControl ();
+
 
 			}
 			else if (currentState == GameState.Level2)
@@ -309,12 +341,11 @@ namespace MyGame
 		//Check the fruit and when it is eaten, snake will increase length and at the same time fruit relocation
 		public void SnakeCheckFruit()
 		{
-			//Created for the sprint work 
+			//Created for the sprint work by Jacky 
 			if (s.Head.X == f.X && s.Head.Y == f.Y)
 			{
 				s.IncreaseLenght ();
 				f.GenerateRan ();
-				Counter ();
 			}
 		}
 
@@ -338,6 +369,8 @@ namespace MyGame
 				delay = time;
 				currentState = GameState.Level2;
 
+
+
 			}
 			else if (counter == level2limit && currentState == GameState.Level2)
 			{
@@ -352,6 +385,17 @@ namespace MyGame
 			else if (counter == level3limit && currentState == GameState.Level3)
 			{
 				level.Drawlevel3();
+
+				//Add the ending credits after final level completed by Author: Jacky
+				Credit= SwinGame.LoadBitmap (SwinGame.PathToResource ("snakecredit.png", ResourceKind.BitmapResource));
+
+				SwinGame.DrawBitmap(Credit, 0, 0);
+				//SwinGame.PlaySoundEffect ("SwinGameStart.wav");
+				SwinGame.RefreshScreen ();
+				SwinGame.Delay (3000);
+				SwinGame.ProcessEvents ();
+
+				//...To be decide where to go 
 			}
 		}
 

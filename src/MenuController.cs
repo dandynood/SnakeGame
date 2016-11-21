@@ -87,6 +87,10 @@ namespace MyGame
 			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 365, 5*TileWidth, TileHeight+5);
 			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 490, 5*TileWidth, TileHeight+5);
 
+			//Credits button
+			SwinGame.FillRectangle(Color.Cyan, 13 * TileWidth, 428, 5*TileWidth, TileHeight+5);
+			SwinGame.DrawBitmap ("Credits.png", 350, 430);
+
 			SwinGame.DrawBitmap ("Playtext.png", 14*TileWidth+10, 10*TileHeight-10);
 			SwinGame.DrawBitmap ("Settingstext.png", 345, 15*TileHeight-10);
 			SwinGame.DrawBitmap ("Quittext.png", 360, 20*TileHeight-10);
@@ -116,18 +120,25 @@ namespace MyGame
 			}
 		}
 	
+		//Editted by Jacky because added new credit button
 		public int Selected(Point2D pt)
 		{
-			if (SwinGame.PointInRect (pt, 13 * TileWidth, 240, 5 * TileWidth, TileHeight+5))
+			if (SwinGame.PointInRect (pt, 13 * TileWidth, 240, 5 * TileWidth, TileHeight + 5))
 			{
 				//play
 				return 1;
 			}
-			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 365, 5 * TileWidth, TileHeight+5))
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 365, 5 * TileWidth, TileHeight + 5))
 			{
 				//settings
 				return 2;
 			}
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 428, 5 * TileWidth, TileHeight + 5))
+			{
+				//Credits Author: Jacky
+				return 15;
+			}
+
 			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 490, 5 * TileWidth, TileHeight+5))
 			{
 				//quit
