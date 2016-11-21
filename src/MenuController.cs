@@ -9,6 +9,10 @@ namespace MyGame
 		private const int TileHeight = 25;
 		private int i;
 		private int y;
+<<<<<<< HEAD
+		private int mute=0;
+=======
+>>>>>>> origin
 		private Snake s = new Snake();
 		private Snake n = new Snake();
 		private Snake a = new Snake();
@@ -67,6 +71,14 @@ namespace MyGame
 			set{ y = value; }
 		}
 
+<<<<<<< HEAD
+		public int Mute
+		{
+			get{ return mute; }
+		}
+
+=======
+>>>>>>> origin
 		public void DrawButton()
 		{
 
@@ -76,6 +88,40 @@ namespace MyGame
 			}
 			else if (i == 2)
 			{
+<<<<<<< HEAD
+				SwinGame.FillRectangle (Color.Blue, 13 * TileWidth - 2, 365 - 2, (5 * TileWidth) + 4, TileWidth + 9);
+			}
+			else if (i == 3)
+			{
+				SwinGame.FillRectangle (Color.Blue, 13 * TileWidth - 2, 490 - 2, (5 * TileWidth) + 4, TileWidth + 9);
+			}
+			else if (i == 16)
+			{
+				SwinGame.FillRectangle (Color.Blue, 13 * TileWidth - 2, 302 - 2, (5 * TileWidth) + 4, TileWidth + 9);
+			}
+			else if (i == 7)
+			{
+				SwinGame.FillRectangle (Color.Blue, 13 * TileWidth - 2, 425 - 2, (5 * TileWidth) + 4, TileWidth + 9);
+			}
+
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 240, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 302, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 365, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 425, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle(Color.Cyan, 13 * TileWidth, 478, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 530, 5*TileWidth, TileHeight+5);
+
+			SwinGame.DrawBitmap ("Playtext.png", 14*TileWidth+10, 10*TileHeight-10);
+			SwinGame.DrawBitmap ("tutorialtext.png", 13*TileWidth+5, 302);
+			SwinGame.DrawBitmap ("Settingstext.png", 345, 15*TileHeight-10);
+			SwinGame.DrawBitmap ("Music.png", 14 * TileWidth + 5, 425);
+			SwinGame.DrawBitmap ("Credits.png", 350, 480);
+			SwinGame.DrawBitmap ("Quittext.png", 360, 21*TileHeight+5);
+
+			if (y == 1)
+			{
+				SwinGame.DrawText ("Easy", Color.Red, 14 * TileWidth + 20, 11 * TileHeight);
+=======
 				SwinGame.FillRectangle (Color.Blue, 13*TileWidth-2, 365-2, (5*TileWidth)+4, TileWidth+9);
 			}
 			else if (i == 3)
@@ -94,6 +140,7 @@ namespace MyGame
 			if (y == 1)
 			{
 				SwinGame.DrawText ("Easy", Color.Red, 14 * TileWidth + 10, 11 * TileHeight);
+>>>>>>> origin
 			}
 			else if (y == 2)
 			{
@@ -101,7 +148,11 @@ namespace MyGame
 			}
 			else if (y == 3)
 			{
+<<<<<<< HEAD
+				SwinGame.DrawText ("Hard", Color.Red, 14 * TileWidth + 20, 11 * TileHeight);
+=======
 				SwinGame.DrawText ("Hard", Color.Red, 14 * TileWidth + 10, 11 * TileHeight);
+>>>>>>> origin
 			}
 			//SwinGame.DrawText ("Settings", Color.Red, 360, 15 * TileHeight);
 			//SwinGame.DrawText ("Quit", Color.Red, 375, 20 * TileHeight);
@@ -115,6 +166,56 @@ namespace MyGame
 				i = Selected(SwinGame.PointAt(SwinGame.MouseX (), SwinGame.MouseY ()));
 			}
 		}
+<<<<<<< HEAD
+
+		public void HandleUserInputPauseMenu()
+		{
+			if (SwinGame.MouseClicked (MouseButton.LeftButton))
+			{
+				i = PauseSelected(SwinGame.PointAt(SwinGame.MouseX (), SwinGame.MouseY ()));
+			}
+		}
+
+		public int PauseSelected(Point2D pt)
+		{
+			if (SwinGame.PointInRect (pt, 13 * TileWidth, 240, 5 * TileWidth, TileHeight + 5))
+			{
+				//resume
+				return 8;
+			}
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 364, 5 * TileWidth, TileHeight + 5))
+			{
+				//end gam
+				return 9;
+			}
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 490, 5 * TileWidth, TileHeight + 5))
+			{
+				//quit
+				return 3;
+			}
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 302, 5 * TileWidth, TileHeight + 5))
+			{
+				//mute
+				if (mute == 0)
+				{
+					SwinGame.PauseMusic ();
+					mute = 1;
+				}
+				//unmute
+				else if(mute == 1)
+				{
+					SwinGame.ResumeMusic ();
+					mute = 0;
+				}
+				return 0;
+			}
+			else
+			{
+				return 0;
+			}
+		}
+=======
+>>>>>>> origin
 	
 		public int Selected(Point2D pt)
 		{
@@ -128,7 +229,11 @@ namespace MyGame
 				//settings
 				return 2;
 			}
+<<<<<<< HEAD
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 530, 5 * TileWidth, TileHeight+5))
+=======
 			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 490, 5 * TileWidth, TileHeight+5))
+>>>>>>> origin
 			{
 				//quit
 				return 3;
@@ -151,6 +256,69 @@ namespace MyGame
 				y = 3;
 				return 6;
 			}
+<<<<<<< HEAD
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 478, 5 * TileWidth, TileHeight + 5))
+			{
+				//Credits Author: Jacky
+				return 15;
+			}
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 302, 5 * TileWidth, TileHeight + 5))
+			{
+				//instructions
+				return 16;
+			}
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 425, 5 * TileWidth, TileHeight+5))
+			{
+				//Music
+				return 7;
+			}
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 355, 5 * TileWidth, TileHeight) && i == 7)
+			{
+				//title
+				y = 4;
+				SwinGame.PlayMusic ("Lotus Land.mp3");
+				return 7;
+			}
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 385, 5 * TileWidth, TileHeight) && i == 7)
+			{
+				//Level1
+				y = 5;
+				SwinGame.PlayMusic ("Selene Light.mp3");
+				return 7;
+			}
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 415, 5 * TileWidth, TileHeight) && i == 7)
+			{
+				//Level2
+				y = 6;
+				SwinGame.PlayMusic ("Eternal Shrine Maiden.mp3");
+				return 7;
+			}
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 445, 5 * TileWidth, TileHeight) && i == 7)
+			{
+				//Level3
+				y = 7;
+				SwinGame.PlayMusic ("Alice Maestra.mp3");
+				return 7;
+			}
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 475, 5 * TileWidth, TileHeight) && i == 7)
+			{
+				//Mute
+				y = 8;
+				if (mute == 0)
+				{
+					SwinGame.PauseMusic ();
+					mute = 1;
+				}
+				//unmute
+				else if(mute == 1)
+				{
+					SwinGame.ResumeMusic ();
+					mute = 0;
+				}
+				return 7;
+			}
+=======
+>>>>>>> origin
 			else
 			{
 				return 0;
@@ -186,6 +354,50 @@ namespace MyGame
 			//SwinGame.DrawText ("Hard", Color.Red, 550, 435);
 		}
 
+<<<<<<< HEAD
+		public void DrawSettingMusic()
+		{
+			if (y == 4)
+			{
+				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 355 - 4, (5 * TileWidth) + 8, TileWidth + 8);
+			}
+			else if (y == 5)
+			{
+				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 385 - 4, (5 * TileWidth) + 8, TileWidth + 8);
+			}
+			else if (y == 6)
+			{
+				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 415 - 4, (5 * TileWidth) + 8, TileWidth + 8);
+			}
+			else if (y == 7)
+			{
+				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 445 - 4, (5 * TileWidth) + 8, TileWidth + 8);
+			}
+			else if (y == 8)
+			{
+				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 475 - 4, (5 * TileWidth) + 8, TileWidth + 8);
+			}
+
+			//title
+			SwinGame.FillRectangle (Color.Purple, 20 * TileWidth, 355, 5*TileWidth, TileHeight);
+			//lvl1
+			SwinGame.FillRectangle (Color.Purple, 20 * TileWidth, 385, 5*TileWidth, TileHeight);
+			//lvl2
+			SwinGame.FillRectangle (Color.Purple, 20 * TileWidth, 415, 5*TileWidth, TileHeight);
+			//lvl3
+			SwinGame.FillRectangle (Color.Purple, 20 * TileWidth, 445, 5*TileWidth, TileHeight);
+			//mute
+			SwinGame.FillRectangle (Color.Purple, 20 * TileWidth, 475, 5*TileWidth, TileHeight);
+
+			SwinGame.DrawBitmap ("Title.png", 536, 355);
+			SwinGame.DrawBitmap ("Lvl1.png", 525, 385);
+			SwinGame.DrawBitmap ("Lvl2.png", 525, 415);
+			SwinGame.DrawBitmap ("Lvl3.png", 525, 445);
+			SwinGame.DrawBitmap ("Mute.png", 536, 475);
+		}
+
+=======
+>>>>>>> origin
 		public void DrawTitle()
 		{
 			s.Draw ();
@@ -200,6 +412,58 @@ namespace MyGame
 			k2.Draw ();
 		}
 
+<<<<<<< HEAD
+		public void DrawTitleInvert()
+		{
+			s.DrawInvert ();
+			n.DrawInvert ();
+			a.DrawInvert ();
+			k.DrawInvert ();
+			e.DrawInvert ();
+			e1.DrawInvert ();
+
+			a1.DrawInvert ();
+			k1.DrawInvert ();
+			k2.DrawInvert ();
+		}
+
+		public void DrawPauseButtons()
+		{
+			if (mute == 1)
+			{
+				SwinGame.FillRectangle (Color.Blue, 13 * TileWidth - 2, 302 - 2, (5 * TileWidth) + 4, TileWidth + 9);
+			}
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 240, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 302, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 364, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 490, 5*TileWidth, TileHeight+5);
+
+			SwinGame.DrawBitmap ("Resume.png", 14*TileWidth, 10*TileHeight-10);
+			SwinGame.DrawBitmap ("mute.png", 360, 12*TileHeight+5);
+			SwinGame.DrawBitmap ("End game.png", 340, 15*TileHeight-10);
+			SwinGame.DrawBitmap ("Quittext.png", 360, 20*TileHeight-10);
+
+		}
+
+		public void DrawPauseButtonsInvert()
+		{
+			if (mute == 1)
+			{
+				SwinGame.FillRectangle (Color.White, 13 * TileWidth - 2, 302 - 2, (5 * TileWidth) + 4, TileWidth + 9);
+			}
+				SwinGame.FillRectangle (Color.Red, 13 * TileWidth, 240, 5*TileWidth, TileHeight+5);
+				SwinGame.FillRectangle (Color.Red, 13 * TileWidth, 302, 5*TileWidth, TileHeight+5);
+				SwinGame.FillRectangle (Color.Red, 13 * TileWidth, 364, 5*TileWidth, TileHeight+5);
+				SwinGame.FillRectangle (Color.Red, 13 * TileWidth, 490, 5*TileWidth, TileHeight+5);
+
+				SwinGame.DrawBitmap ("Resume.png", 14*TileWidth, 10*TileHeight-10);
+				SwinGame.DrawBitmap ("mute.png", 360, 12*TileHeight+5);
+				SwinGame.DrawBitmap ("End game.png", 340, 15*TileHeight-10);
+				SwinGame.DrawBitmap ("Quittext.png", 360, 20*TileHeight-10);
+		}
+
+=======
+>>>>>>> origin
 		public void MoveTitle()
 		{
 
@@ -350,6 +614,10 @@ namespace MyGame
 		
 
 		}
+<<<<<<< HEAD
+			
+=======
+>>>>>>> origin
 
 		public void ResetTitle()
 		{

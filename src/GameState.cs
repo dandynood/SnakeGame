@@ -16,6 +16,12 @@ namespace MyGame
 
 		GameOver,
 
+		Pause,
+
+		AnnouceGame,
+
+		ViewingCredits,
+
 		QuitProgram
 	}
 }

@@ -12,11 +12,16 @@ namespace MyGame
             //Open the game window
             SwinGame.OpenGraphicsWindow("GameMain", 800, 600);
            // SwinGame.ShowSwinGameSplashScreen();
-
 			GameController control = new GameController ();
+<<<<<<< HEAD
+			SwinGame.PlayMusic ("Lotus Land.mp3");
+            //Run the game loop
+			while (!(SwinGame.WindowCloseRequested() == true || control.CurrentState == GameState.QuitProgram))
+=======
 
             //Run the game loop
 			while (!(SwinGame.WindowCloseRequested() == true | control.CurrentState == GameState.QuitProgram))
+>>>>>>> origin
             {
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
@@ -24,8 +29,7 @@ namespace MyGame
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.White);
 
-                SwinGame.DrawFramerate(0,0);
-
+                //SwinGame.DrawFramerate(0,0);
 
 				control.PlayGame ();
 
@@ -34,6 +38,8 @@ namespace MyGame
 				SwinGame.RefreshScreen(60);
 
             }
+
+			SwinGame.ReleaseAllMusic ();
         }
     }
 }
