@@ -82,12 +82,19 @@ namespace MyGame
 			{
 				SwinGame.FillRectangle (Color.Blue, 13*TileWidth-2, 490-2, (5*TileWidth)+4, TileWidth+9);
 			}
+			else if (i == 7)
+			{
+				SwinGame.FillRectangle (Color.Blue, 13*TileWidth-2, 415-2, (5*TileWidth)+4, TileWidth+9);
+			}
+
 
 			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 240, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 415, 5*TileWidth, TileHeight+5);
 			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 365, 5*TileWidth, TileHeight+5);
 			SwinGame.FillRectangle (Color.Cyan, 13 * TileWidth, 490, 5*TileWidth, TileHeight+5);
 
 			SwinGame.DrawBitmap ("Playtext.png", 14*TileWidth+10, 10*TileHeight-10);
+			SwinGame.DrawBitmap ("Music.png", 14*TileWidth+5, 17*TileHeight-10);
 			SwinGame.DrawBitmap ("Settingstext.png", 345, 15*TileHeight-10);
 			SwinGame.DrawBitmap ("Quittext.png", 360, 20*TileHeight-10);
 
@@ -106,7 +113,9 @@ namespace MyGame
 			//SwinGame.DrawText ("Settings", Color.Red, 360, 15 * TileHeight);
 			//SwinGame.DrawText ("Quit", Color.Red, 375, 20 * TileHeight);
 
+
 		}
+
 
 		public void HandleUserInputMenu()
 		{
@@ -133,6 +142,13 @@ namespace MyGame
 				//quit
 				return 3;
 			}
+			else if (SwinGame.PointInRect (pt, 13 * TileWidth, 415, 5 * TileWidth, TileHeight+5))
+			{
+				//Music
+				return 7;
+			}
+
+
 			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 365, 5 * TileWidth, TileHeight) && i == 2)
 			{
 				//easy
@@ -147,10 +163,42 @@ namespace MyGame
 			}
 			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 450, 5 * TileWidth, TileHeight) && i == 2)
 			{
-				//medium
+				//hard
 				y = 3;
 				return 6;
 			}
+
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 310, 5 * TileWidth, TileHeight) && i == 7)
+			{
+				//title
+				y = 4;
+				return 10;
+			}
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 360, 5 * TileWidth, TileHeight) && i == 7)
+			{
+				//Level1
+				y = 5;
+				return 11;
+			}
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 360, 5 * TileWidth, TileHeight) && i == 7)
+			{
+				//Level2
+				y = 6;
+				return 12;
+			}
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 360, 5 * TileWidth, TileHeight) && i == 7)
+			{
+				//Level3
+				y = 7;
+				return 13;
+			}
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 360, 5 * TileWidth, TileHeight) && i == 7)
+			{
+				//Mute
+				y = 8;
+				return 14;
+			}
+
 			else
 			{
 				return 0;
@@ -173,19 +221,51 @@ namespace MyGame
 				SwinGame.FillRectangle (Color.Red, 20*TileWidth-4, 450-4, (5*TileWidth)+8, TileWidth+8);
 			}
 
+
 			SwinGame.FillRectangle (Color.Orange, 20 * TileWidth, 365, 5*TileWidth, TileHeight);
 			SwinGame.FillRectangle (Color.Orange, 20 * TileWidth, 405, 5*TileWidth, TileHeight);
 			SwinGame.FillRectangle (Color.Orange, 20 * TileWidth, 450, 5*TileWidth, TileHeight);
+
 
 			SwinGame.DrawBitmap ("Easytext.png", 540, 365);
 			SwinGame.DrawBitmap ("Mediumtext.png", 522, 405);
 			SwinGame.DrawBitmap ("Hardtext.png", 536, 450);
 
-			//SwinGame.DrawText ("Easy", Color.Red, 550, 375);
-			//SwinGame.DrawText ("Medium", Color.Red, 542, 405);
-			//SwinGame.DrawText ("Hard", Color.Red, 550, 435);
+
 		}
 
+		public void DrawSettingMusic()
+		{
+			if (y == 4)
+			{
+				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 310 - 4, (5 * TileWidth) + 8, TileWidth + 8);
+			}
+			else if (y == 5)
+			{
+				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 340 - 4, (5 * TileWidth) + 8, TileWidth + 8);
+			}
+			else if (y == 6)
+			{
+				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 370 - 4, (5 * TileWidth) + 8, TileWidth + 8);
+			}
+
+			//title
+			SwinGame.FillRectangle (Color.Purple, 20 * TileWidth, 355, 5*TileWidth, TileHeight);
+			//lvl1
+			SwinGame.FillRectangle (Color.Purple, 20 * TileWidth, 385, 5*TileWidth, TileHeight);
+			//lvl2
+			SwinGame.FillRectangle (Color.Purple, 20 * TileWidth, 415, 5*TileWidth, TileHeight);
+			//lvl3
+			SwinGame.FillRectangle (Color.Purple, 20 * TileWidth, 445, 5*TileWidth, TileHeight);
+			//mute
+			SwinGame.FillRectangle (Color.Purple, 20 * TileWidth, 475, 5*TileWidth, TileHeight);
+
+			SwinGame.DrawBitmap ("Title.png", 536, 355);
+			SwinGame.DrawBitmap ("Lvl1.png", 525, 385);
+			SwinGame.DrawBitmap ("Lvl2.png", 525, 415);
+			SwinGame.DrawBitmap ("Lvl3.png", 525, 445);
+			SwinGame.DrawBitmap ("Mute.png", 536, 475);
+		}
 		public void DrawTitle()
 		{
 			s.Draw ();

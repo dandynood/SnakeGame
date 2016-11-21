@@ -10,6 +10,13 @@ namespace MyGame
 		{
 
 		}
+
+		//Draw level 0 map
+		public void Drawlevel0()
+		{
+		}
+
+	
 		//Draw level 1 map
 		public void Drawlevel1()
 		{

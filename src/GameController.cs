@@ -116,6 +116,7 @@ namespace MyGame
 					menu.ResetTitle ();
 					menu.OptionSelected = 0;
 				}
+
 				else if (menu.OptionSelected == 6)
 				{
 					menu.SettingSelected = 3;
@@ -125,9 +126,72 @@ namespace MyGame
 					menu.ResetTitle ();
 					menu.OptionSelected = 0;
 				}
+
+				else if (menu.OptionSelected == 7)
+				{
+					menu.DrawSettingMusic();
+				}
+
+				else if (menu.OptionSelected == 10)
+				{
+					menu.SettingSelected = 1;
+					SwinGame.PlaySoundEffect ("SMusic1.wav");
+					menu.DrawSettings ();
+					menu.ResetTitle ();
+					menu.OptionSelected = 0;
+				}
+				//Title
+				else if (menu.OptionSelected == 10)
+				{
+					menu.SettingSelected = 1;
+
+					SwinGame.PlaySoundEffect ("SMusic2.wav");
+					menu.DrawSettings ();
+					menu.ResetTitle ();
+					menu.OptionSelected = 0;
+				}
+				//Level 1
+				else if (menu.OptionSelected == 11)
+				{
+					menu.SettingSelected = 1;
+
+					SwinGame.PlaySoundEffect ("SMusic2.wav");
+					menu.DrawSettings ();
+					menu.ResetTitle ();
+					menu.OptionSelected = 0;
+				}
+				//Level2
+				else if (menu.OptionSelected == 12)
+				{
+					menu.SettingSelected = 1;
+
+					SwinGame.PlaySoundEffect ("SMusic2.wav");
+					menu.DrawSettings ();
+					menu.ResetTitle ();
+					menu.OptionSelected = 0;
+				}
+				//Level3
+				else if (menu.OptionSelected == 13)
+				{
+					menu.SettingSelected = 1;
+
+					SwinGame.PlaySoundEffect ("SMusic2.wav");
+					menu.DrawSettings ();
+					menu.ResetTitle ();
+					menu.OptionSelected = 0;
+				}
+				//mute
+				else if (menu.OptionSelected == 14)
+				{
+					menu.SettingSelected = 1;
+					menu.DrawSettings ();
+					menu.ResetTitle ();
+					menu.OptionSelected = 0;
+				}
 				delaytitle += timetitle;
 								
 			}
+	
 			else if (currentState == GameState.Level1)
 			{
 				f.Draw ();
@@ -323,7 +387,6 @@ namespace MyGame
 		{
 
 			counter++;		
-			//Count = string.Format ("{0}", counter);
 		}
 
 		public void GameStateControl()
