@@ -417,7 +417,7 @@ namespace MyGame
 					}
 					else if (previouState == GameState.Level3)
 					{
-						SwinGame.SetMusicVolume (1F);
+						SwinGame.SetMusicVolume (0.8F);
 						SwinGame.PlayMusic ("Alice Maestra.mp3");
 					}
 				}
@@ -781,7 +781,7 @@ namespace MyGame
 				SwinGame.StopMusic ();
 				SwinGame.Delay (2000);
 				int i = 0;
-				SwinGame.SetMusicVolume (0.9F);
+				SwinGame.SetMusicVolume (0.7F);
 				SwinGame.PlayMusic ("Maple Dream.mp3");
 				menu.ResetTitle ();
 				while (i < 15)
@@ -919,7 +919,8 @@ namespace MyGame
 			{
 				if (s.SnakeParts [i].X == s.Head.X && s.SnakeParts [i].Y == s.Head.Y)
 				{
-					SwinGame.Delay (500);
+					SwinGame.PlaySoundEffect ("crashitself.wav");
+					SwinGame.Delay (2000);
 					currentState = GameState.GameOver;
 					break;
 				}
