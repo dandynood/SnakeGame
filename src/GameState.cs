@@ -20,8 +20,6 @@ namespace MyGame
 
 		AnnouceGame,
 
-		ViewingCredits,
-
 		QuitProgram
 	}
 }

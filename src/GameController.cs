@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using SwinGameSDK;
 
 namespace MyGame
@@ -14,16 +12,15 @@ namespace MyGame
 		private Level level;
 		private Fruit f;
 		Wall w;
-		private int delay = 80;
-		private int time = 80;
-		private int resetsetting = 80;
+		private int delay = 100;
+		private int time = 100;
+		private int resetsetting = 100;
 		private int delaytitle = 80;
 		private int timetitle = 80;
 		int counter=0;
-		float vol = 0.4F;
-		int level1limit = 25;
-		int level2limit = 35;
-		int level3limit = 40;
+		int level1limit = 20;
+		int level2limit = 25;
+		int level3limit = 35;
 		int level0limit = 50;
 
  		const int Counter_Left= 375;
@@ -40,13 +37,8 @@ namespace MyGame
 			w = new Wall ();
 			menu.SettingSelected = 2;
 			currentState = GameState.ViewingMenu;
-			f.GenerateRan ();
+			f.GenerateRanLevel1 (s,w);
 			SwinGame.LoadMusic ("megalovania snake.mp3");
-			SwinGame.LoadMusic ("Eternal Shrine Maiden.mp3");
-			SwinGame.LoadMusic ("Maple Dream.mp3");
-			SwinGame.LoadMusic ("game over.mp3");
-			SwinGame.LoadMusic ("Lotus Land.mp3");
-			SwinGame.LoadMusic ("Selene Light.mp3");
 
 			timer.Interval = delay;
 			timer2.Interval = delaytitle;
@@ -92,9 +84,6 @@ namespace MyGame
 			//Viewing the menu where the title, buttons are drawn.
 			if (currentState == GameState.ViewingMenu)
 			{
-				SwinGame.DrawBitmap ("menubackground.png", 0, 0);
-				SwinGame.DrawBitmap ("copyright.png", 0, 22 * 25);
-				SwinGame.DrawText ("James, Ernest, Jacky, Reuben, Sem 2 2016 SWE20001", Color.Red, 2*25, 23 * 25);
 				menu.DrawButton ();
 				menu.DrawTitle ();
 
@@ -112,7 +101,6 @@ namespace MyGame
 					s.Direction = DirectionEnum.Right;
 					currentState = GameState.AnnouceGame;
 					previouState = GameState.Level1;
-					SwinGame.FadeMusicOut (2500);
 					menu.OptionSelected = 0;		
 				}
 				else if (menu.OptionSelected == 2)
@@ -126,9 +114,9 @@ namespace MyGame
 				else if (menu.OptionSelected == 4)
 				{
 					menu.SettingSelected = 1;
-					time = 100;
-					delay = 100;
-					resetsetting = 100;
+					time = 150;
+					delay = 150;
+					resetsetting = 150;
 					timer.Interval = delay;
 					menu.DrawSettings ();
 					menu.ResetTitle ();
@@ -137,9 +125,9 @@ namespace MyGame
 				else if (menu.OptionSelected == 5)
 				{
 					menu.SettingSelected = 2;
-					time = 80;
-					delay = 80;
-					resetsetting = 70;
+					time = 100;
+					delay = 100;
+					resetsetting = 100;
 					timer.Interval = delay;
 					menu.DrawSettings ();
 					menu.ResetTitle ();
@@ -156,20 +144,6 @@ namespace MyGame
 					menu.ResetTitle ();
 					menu.OptionSelected = 0;
 				}
-				else if (menu.OptionSelected == 7)
-				{
-					menu.DrawSettingMusic();
-				}
-
-				else if (menu.OptionSelected == 15)
-				{
-					currentState = GameState.ViewingCredits;
-					menu.OptionSelected = 0;
-				}
-				else if (menu.OptionSelected == 16)
-				{
-					SwinGame.DrawBitmap("GameInstruction.png", 460, 245);
-				}
 				delaytitle += timetitle;
 								
 			}
@@ -177,40 +151,35 @@ namespace MyGame
 			{
 				if (previouState == GameState.Level1)
 				{
-					SwinGame.ClearScreen (Color.LightGreen);
 					level.Drawlevel1 ();
 				}
 				else if (previouState == GameState.Level2)
 				{
-					SwinGame.ClearScreen (Color.PeachPuff);
 					level.Drawlevel2 ();
 				}
 				else if (previouState == GameState.Level3)
 				{
-					SwinGame.ClearScreen (Color.Gold);
 					level.Drawlevel3 ();
 				}
 
 				if (previouState == GameState.Level0)
 				{
 					SwinGame.ClearScreen (Color.Black);
-					f.Draw ();
 					s.DrawInvert ();
 					menu.DrawPauseButtonsInvert ();
 					menu.DrawTitleInvert ();
 					SwinGame.DrawBitmap ("pausetext.png", 10 * 25, 2 * 25);
 					menu.HandleUserInputPauseMenu ();
-				
+					f.Draw ();
 				}
 				else
 				{
-					f.Draw ();
 					s.Draw ();
 					menu.DrawPauseButtons ();
 					menu.DrawTitle ();
 					SwinGame.DrawBitmap ("pausetext.png", 10 * 25, 2 * 25);
 					menu.HandleUserInputPauseMenu ();
-				
+					f.Draw ();
 				}
 
 				if (menu.OptionSelected == 3)
@@ -225,8 +194,6 @@ namespace MyGame
 				else if (menu.OptionSelected == 9)
 				{
 					SwinGame.StopMusic ();
-					SwinGame.SetMusicVolume (1F);
-					SwinGame.PlayMusic ("Lotus Land.mp3");
 					currentState = GameState.ViewingMenu;
 					menu.ResetTitle ();
 					s.ResetSnake ();
@@ -238,7 +205,6 @@ namespace MyGame
 			}
 			else if (currentState == GameState.Level1)
 			{
-				SwinGame.ClearScreen (Color.LightGreen);
 				level.Drawlevel1 ();
 				s.Draw ();
 				f.Draw ();
@@ -246,8 +212,8 @@ namespace MyGame
 				timer.Start ();
 
 				HandleUserInput ();
-				delay += time;
 
+				delay += time;
 				SnakeCheckWallLevel1 ();
 				SnakeCheckFruit ();
 				SnakeCheckSides ();
@@ -257,7 +223,6 @@ namespace MyGame
 			}
 			else if (currentState == GameState.Level2)
 			{
-				SwinGame.ClearScreen (Color.PeachPuff);
 				level.Drawlevel2 ();
 				s.Draw ();
 				f.Draw ();
@@ -270,12 +235,11 @@ namespace MyGame
 				SnakeCheckWallLevel2 ();
 				SnakeCheckFruit ();
 				SnakeCheckSides ();
-				SnakeCheckItself ();
+				SnakeCheckFruit ();
 				GameStateControl ();
 			}
 			else if (currentState == GameState.Level3)
 			{
-				SwinGame.ClearScreen (Color.Gold);
 				level.Drawlevel3 ();
 				s.Draw ();
 				f.Draw ();
@@ -294,22 +258,6 @@ namespace MyGame
 			else if (currentState == GameState.Level0)
 			{
 				SwinGame.ClearScreen (Color.Black);
-				if (counter >= 10 && counter < 20 && currentState == GameState.Level0)
-				{
-					level.DrawInvertLevel1 ();
-					SnakeCheckWallLevel1 ();
-				}
-				else if (counter >= 20 && counter < 30 && currentState == GameState.Level0)
-				{
-					level.DrawInvertLevel2 ();
-					SnakeCheckWallLevel2 ();
-				}
-				else if (counter >= 30 && counter < 40 && currentState == GameState.Level0)
-				{
-					level.DrawInvertLevel3 ();
-					SnakeCheckWallLevel3 ();
-				}
-
 				s.DrawInvert ();
 				f.Draw ();
 				DrawCounter ();
@@ -325,49 +273,23 @@ namespace MyGame
 			{
 				if (previouState == GameState.Level1)
 				{
-					SwinGame.ClearScreen (Color.LightGreen);
 					level.Drawlevel1 ();
-					s.Draw ();
-					s.DrawGameOverEyes ();
-					f.Draw ();
-					SwinGame.DrawBitmap ("gameover.gif", 150, 200);
-					SwinGame.DrawText ("Press any key to go back to the main menu", Color.Blue, 250, 380);
 				}
 				else if (previouState == GameState.Level2)
 				{
-					SwinGame.ClearScreen (Color.PeachPuff);
 					level.Drawlevel2 ();
-					s.Draw ();
-					s.DrawGameOverEyes ();
-					f.Draw ();
-					SwinGame.DrawBitmap ("gameover.gif", 150, 200);
-					SwinGame.DrawText ("Press any key to go back to the main menu", Color.Blue, 250, 380);
 				}
 				else if (previouState == GameState.Level3)
 				{
-					SwinGame.ClearScreen (Color.Gold);
 					level.Drawlevel3 ();
-					s.Draw ();
-					s.DrawGameOverEyes ();
-					f.Draw ();
-					SwinGame.DrawBitmap ("gameover.gif", 150, 200);
-					SwinGame.DrawText ("Press any key to go back to the main menu", Color.Blue, 250, 380);
 				}
-				else if (previouState == GameState.Level0)
-				{
-					SwinGame.ClearScreen (Color.Black);
-					for (int i = -1; i < 33; i++)
-					{
-						for (int y = -1; y < 41; y++)
-						{
-							SwinGame.DrawText (("YOU DIED"), Color.Red, i * 70, y * 15);
-						}
-
-					}
-				}
+				s.Draw ();
+				s.DrawGameOverEyes ();
+				f.Draw ();
+				SwinGame.DrawBitmap ("gameover.gif", 150, 200);
+				SwinGame.DrawText ("Press any key to go back to the main menu", Color.Blue, 250, 380);
 				counter = 0;
-				delay = resetsetting;
-				time = resetsetting;
+				delay = time;
 				delaytitle = timetitle;
 				HandleUserGameOverInput ();
 			}
@@ -378,17 +300,14 @@ namespace MyGame
 				if (previouState == GameState.Level1)
 				{
 					level.Drawlevel1 ();
-					f.GenerateRanLevel1 (s, w);
 				}
 				else if (previouState == GameState.Level2)
 				{
 					level.Drawlevel2 ();
-					f.GenerateRanLevel2 (s, w);
 				}
 				else if (previouState == GameState.Level3)
 				{
 					level.Drawlevel3 ();
-					f.GenerateRanLevel3 (s, w);
 				}
 				else if (previouState == GameState.Level0)
 				{
@@ -404,22 +323,6 @@ namespace MyGame
 						i++;
 						SwinGame.RefreshScreen (60);
 					}
-
-					if (previouState == GameState.Level1)
-					{
-						SwinGame.SetMusicVolume (0.7F);
-						SwinGame.PlayMusic ("Selene Light.mp3");
-					}
-					else if (previouState == GameState.Level2)
-					{
-						SwinGame.SetMusicVolume (0.7F);
-						SwinGame.PlayMusic ("Eternal Shrine Maiden.mp3");
-					}
-					else if (previouState == GameState.Level3)
-					{
-						SwinGame.SetMusicVolume (0.8F);
-						SwinGame.PlayMusic ("Alice Maestra.mp3");
-					}
 				}
 				else if (previouState == GameState.Level0)
 				{
@@ -430,19 +333,10 @@ namespace MyGame
 						SwinGame.RefreshScreen (60);
 					}
 					SwinGame.Delay (1000);
-					SwinGame.SetMusicVolume (0.8F);
 					SwinGame.PlayMusic ("megalovania snake.mp3");
 				}
 				currentState = previouState;
 
-			}
-			else if (currentState == GameState.ViewingCredits)
-			{
-				SwinGame.DrawBitmap("snakecredit.png", 0, 0);
-				SwinGame.RefreshScreen (60);
-				SwinGame.Delay (3000);
-				SwinGame.ProcessEvents ();
-				currentState = GameState.ViewingMenu;
 			}
 
 		}
@@ -464,11 +358,11 @@ namespace MyGame
 					}
 					else if (previouState == GameState.Level2)
 					{
-						SwinGame.DrawBitmap ("level2.png", 17 * 25, 2 * 25);
+						SwinGame.DrawBitmap ("level2.png", 8 * 25, 8 * 25);
 					}
 					else if (previouState == GameState.Level3)
 					{
-						SwinGame.DrawBitmap ("level3.png", 17 * 25, 2 * 25);
+						SwinGame.DrawBitmap ("level3.png", 8 * 25, 8 * 25);
 					}
 				}
 				else if (i == 2)
@@ -493,12 +387,12 @@ namespace MyGame
 				if (i == 0)
 				{
 					SwinGame.DrawBitmap ("finallevel.gif", 1 * 25, 2 * 25);
-					SwinGame.Delay (500);
+					SwinGame.Delay (1000);
 				}
 				else if (i == 1)
 				{
 					SwinGame.DrawBitmap ("level0.gif", 22 * 25, 2 * 25);
-					SwinGame.Delay (500);
+					SwinGame.Delay (1000);
 				}
 				else if (i == 2)
 				{
@@ -519,17 +413,17 @@ namespace MyGame
 				else if (i == 5)
 				{
 					SwinGame.DrawBitmap ("finallevel1.png", 6 * 25, 15 * 25);
-					SwinGame.Delay (500);
+					SwinGame.Delay (1000);
 				}
 				else if (i == 6)
 				{
 					SwinGame.DrawBitmap ("finallevel2.png", 14 * 25, 15 * 25);
-					SwinGame.Delay (500);
+					SwinGame.Delay (1000);
 				}
 				else if (i == 7)
 				{
 				  SwinGame.DrawBitmap ("finallevel3.png", 22 * 25, 15 * 25);
-				  SwinGame.Delay (500);
+				  SwinGame.Delay (1000);
 				}
 			}
 		}
@@ -541,7 +435,7 @@ namespace MyGame
 
 			if (s.Head.X == w.Wall1x && s.Head.Y >= w.Wall1y && s.Head.Y <= w.Wall1y + w.wallLenght - 1) {
 
-				SwinGame.PlaySoundEffect ("crash.wav", vol);
+				s.DrawGameOverEyes ();
 				currentState = GameState.GameOver;
 				SwinGame.Delay (2000);
 			}
@@ -550,27 +444,29 @@ namespace MyGame
 
 			if (s.Head.X == w.Wall2x && s.Head.Y >= w.Wall2y && s.Head.Y <= w.Wall2y + w.wallLenght - 1) {
 
-				SwinGame.PlaySoundEffect ("crash.wav", vol);
+				s.DrawGameOverEyes ();
 				currentState = GameState.GameOver;				
 				SwinGame.Delay (2000);
 
 			}
 		
+			previouState = GameState.Level1;
 		}
 
 
 		public void SnakeCheckWallLevel2()
 		{
 			// Check for Wall 3
+
 			if (s.Head.Y == w.wall3_y && s.Head.X >= w.wall3_x && s.Head.X <= w.wall3_x + w.wall3_width1 - 1) {
 
-				SwinGame.PlaySoundEffect ("crash.wav", vol);
+				s.DrawGameOverEyes ();
 				currentState = GameState.GameOver;
 				SwinGame.Delay (2000);
 
 			}else if (s.Head.X == w.wall3_x && s.Head.Y >= w.wall3_y && s.Head.Y <= w.wall3_y + w.wall3_lenght2 - 1) {
 
-				SwinGame.PlaySoundEffect ("crash.wav", vol);
+				s.DrawGameOverEyes ();
 				currentState = GameState.GameOver;
 				SwinGame.Delay (2000);
 			}
@@ -579,13 +475,13 @@ namespace MyGame
 
 			if (s.Head.Y == w.wall4_y && s.Head.X >= w.wall4_x && s.Head.X <= w.wall4_x + w.wall4_width1 - 1) {
 
-				SwinGame.PlaySoundEffect ("crash.wav", vol);
+				s.DrawGameOverEyes ();
 				currentState = GameState.GameOver;
 				SwinGame.Delay (2000);
 
 			} else if (s.Head.X == w.wall4_w && s.Head.Y >= w.wall4_y && s.Head.Y <= w.wall4_y + w.wall4_lenght2 - 1) {
 
-				SwinGame.PlaySoundEffect ("crash.wav", vol);
+				s.DrawGameOverEyes ();
 				currentState = GameState.GameOver;
 				SwinGame.Delay (2000);
 			}
@@ -594,81 +490,73 @@ namespace MyGame
 
 			if (s.Head.Y == w.wall5_w && s.Head.X >= w.wall5_x && s.Head.X <= w.wall5_x + w.wall5_width1 - 1) {
 
-				SwinGame.PlaySoundEffect ("crash.wav", vol);
+				s.DrawGameOverEyes ();
 				currentState = GameState.GameOver;
 				SwinGame.Delay (2000);
 
 			} else if (s.Head.X == w.wall5_x && s.Head.Y >= w.wall5_y && s.Head.Y <= w.wall5_y + w.wall5_lenght2 - 1) {
 
-				SwinGame.PlaySoundEffect ("crash.wav", vol);
+				s.DrawGameOverEyes ();
 				currentState = GameState.GameOver;
+				s.DrawGameOverEyes ();
 				SwinGame.Delay (2000);
 			}
 
 
 			if (s.Head.Y == w.wall6_w && s.Head.X >= w.wall6_x && s.Head.X <= w.wall6_x + w.wall6_width1 - 1) {
 
-				SwinGame.PlaySoundEffect ("crash.wav",vol);
+				s.DrawGameOverEyes ();
 				currentState = GameState.GameOver;
 				SwinGame.Delay (2000);
 
 			} else if (s.Head.X == w.wall4_w && s.Head.Y >= w.wall6_y && s.Head.Y <= w.wall6_y + w.wall6_lenght2 - 1) {
 
-				SwinGame.PlaySoundEffect ("crash.wav", vol);
+				s.DrawGameOverEyes ();
 				currentState = GameState.GameOver;
 				SwinGame.Delay (2000);
 			}
-				
+			previouState = GameState.Level2;
 		}
 
 		public void SnakeCheckWallLevel3 ()
 		{
 			SnakeCheckWallLevel1 ();
 			SnakeCheckWallLevel2 ();
+
+			previouState = GameState.Level3;
 		}
 
-		/*public void SnakeCheckItself ()
+		public void SnakeCheckItself ()
 		{
 
 			for (int i = 1; i < s.SnakeParts.Count; i++) {
 
-				if (s.Head.X == s.SnakeParts [i].X && s.Head.Y == s.SnakeParts [i].Y) {
+				if (s.SnakeParts[0].X == s.SnakeParts [i].X && s.SnakeParts[0].Y == s.SnakeParts [i].Y) {
 
 					CurrentState = GameState.GameOver;
 				}
 
 			}
 
-		}*/
+		}
+
+
 
 		//Check the fruit and when it is eaten, snake will increase length and at the same time fruit relocation
 		public void SnakeCheckFruit()
 		{
-
-
 			//Created for the sprint work 
 			if (s.Head.X == f.X && s.Head.Y == f.Y)
 			{
 				s.IncreaseLenght ();
-				if (currentState == GameState.Level1)
-				{
+				if (currentState == GameState.Level1) {
 					f.GenerateRanLevel1 (s, w);
-				}
-				else if (currentState == GameState.Level2)
-				{
+				} else if (currentState == GameState.Level2) {
 					f.GenerateRanLevel2 (s, w);
-				}
-				else if (currentState == GameState.Level3)
-				{
+				} else if (currentState == GameState.Level3) {
 					f.GenerateRanLevel3 (s, w);
 				}
-				else if (currentState == GameState.Level0)
-				{
-					f.GenerateRanLevel3 (s, w);
-				}
-
 				Counter ();
-				SwinGame.PlaySoundEffect ("bump.aiff", 0.6F);
 
 				if (counter == 10 && currentState == GameState.Level0)
 				{
@@ -680,7 +568,7 @@ namespace MyGame
 						s.IncreaseLenght ();
 					}
 				}
-					
+
 				if (counter == 20 && currentState == GameState.Level0)
 				{
 					for (int i = 0; i < 7; i++)
@@ -730,45 +618,39 @@ namespace MyGame
 		{
 			if (counter == level1limit && currentState == GameState.Level1)
 			{
-				SwinGame.FadeMusicOut (2500);
 				SwinGame.Delay (2000);
 				counter = 0;
 				s.ResetSnake ();
 				s.Head.X = 10;
 				s.Head.Y = 10;
-				delay = resetsetting;
-				time = resetsetting;
-				f.GenerateRanLevel2 (s, w);
+				delay = time;
+				f.GenerateRanLevel1(s,w);
 				currentState = GameState.AnnouceGame;
 				previouState = GameState.Level2;
 
 			}
 			else if (counter == level2limit && currentState == GameState.Level2)
 			{
-				SwinGame.FadeMusicOut (2500);
 				SwinGame.Delay (2000);
 				counter = 0;
 				s.ResetSnake ();
 				s.Head.X = 8;
 				s.Head.Y = 10;
-				delay = resetsetting;
-				time = resetsetting;
-				f.GenerateRanLevel3 (s, w);
+				delay = time;
+				f.GenerateRanLevel2 (s,w);
 				currentState = GameState.AnnouceGame;
 				previouState = GameState.Level3;
 			
 			}
 			else if (counter == level3limit && currentState == GameState.Level3)
 			{
-				SwinGame.FadeMusicOut (2500);
-				SwinGame.Delay (2000);
 				counter = 0;
 				s.ResetSnake ();
 				s.Head.X = 15;
 				s.Head.Y = 11;
 				delay = 50;
 				time = 50;
-				f.GenerateRanLevel3 (s, w);
+				f.GenerateRanLevel3 (s,w);
 				timer.Interval = delay;
 				currentState = GameState.AnnouceGame;
 				previouState = GameState.Level0;
@@ -778,11 +660,8 @@ namespace MyGame
 			}
 			else if (counter == level0limit && currentState == GameState.Level0)
 			{
-				SwinGame.StopMusic ();
-				SwinGame.Delay (2000);
 				int i = 0;
-				SwinGame.SetMusicVolume (0.7F);
-				SwinGame.PlayMusic ("Maple Dream.mp3");
+				SwinGame.StopMusic ();
 				menu.ResetTitle ();
 				while (i < 15)
 				{
@@ -796,18 +675,7 @@ namespace MyGame
 				delay = resetsetting;
 				time = resetsetting;
 				timer.Interval = resetsetting;
-				currentState = GameState.ViewingCredits;
-				previouState = GameState.ViewingMenu;
-			}
-			else if (previouState == GameState.Level0 && currentState == GameState.GameOver)
-			{
-				SwinGame.SetMusicVolume (1F);
-				SwinGame.PlayMusic ("horrordrone.mp3");
-			}
-			else if (previouState != GameState.Level0 && currentState == GameState.GameOver)
-			{
-				SwinGame.SetMusicVolume (1F);
-				SwinGame.PlayMusic ("game over.mp3", 0);
+				currentState = GameState.ViewingMenu;
 			}
 		}
 
@@ -815,59 +683,47 @@ namespace MyGame
 		{
 			if (currentState == GameState.Level1)
 			{
-				SwinGame.DrawText ((counter + "/" + level1limit), Color.Blue, Counter_Left, Counter_Top);
+				SwinGame.DrawText ((counter+"/"+level1limit),Color.Blue,Counter_Left,Counter_Top);
 			}
-			else if (currentState == GameState.Level2)
+			else if (currentState ==GameState.Level2)
 			{
-				SwinGame.DrawText ((counter + "/" + level2limit), Color.Blue, Counter_Left, Counter_Top);
+				SwinGame.DrawText ((counter+"/"+level2limit),Color.Blue,Counter_Left,Counter_Top);
 			}
-			else if (currentState == GameState.Level3)
+			else if (currentState ==GameState.Level3)
 			{
-				SwinGame.DrawText ((counter + "/" + level3limit), Color.Blue, Counter_Left, Counter_Top);
+				SwinGame.DrawText ((counter+"/"+level3limit),Color.Blue,Counter_Left,Counter_Top);
 			}
-			else if (currentState == GameState.Level0 && counter < 40)
+			else if (currentState ==GameState.Level0)
 			{
 				for (int i = 0; i < 32; i++)
 				{
-					SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, i * 40, Counter_Top + 2);
-					SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, i * 40, 23 * 25);
+					SwinGame.DrawText ((counter+"/"+level0limit),Color.Red,i*25,Counter_Top+2);
+					SwinGame.DrawText ((counter+"/"+level0limit),Color.Red,i*25,23*25);
 				}
 
 				for (int i = 0; i < 23; i++)
 				{
-					SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, 0, i * 25);
-					SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, 31 * 25-10, i * 25);
-				}
-			}
-			else if (currentState == GameState.Level0 && counter >= 40)
-			{
-				for (int i = 0; i < 32; i++)
-				{
-
-					for (int y = 0; y < 25; y++)
-					{
-						SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, i * 45, y *25);
-					}
-
+					SwinGame.DrawText ((counter+"/"+level0limit),Color.Red,0,i*25);
+					SwinGame.DrawText ((counter+"/"+level0limit),Color.Red,31*25,i*25);
 				}
 			}
 		}
 
 		public void HandleUserInput ()
 		{
-			if ((SwinGame.KeyDown (KeyCode.vk_a) || SwinGame.KeyDown(KeyCode.vk_LEFT)) && (s.Direction == DirectionEnum.Up || s.Direction == DirectionEnum.Down))
+			if (SwinGame.KeyDown (KeyCode.vk_a) && (s.Direction == DirectionEnum.Up || s.Direction == DirectionEnum.Down))
 			{
 				s.Direction = DirectionEnum.Left;
 			}
-			else if ((SwinGame.KeyDown (KeyCode.vk_d) || SwinGame.KeyDown(KeyCode.vk_RIGHT)) && (s.Direction == DirectionEnum.Up || s.Direction == DirectionEnum.Down))
+			else if (SwinGame.KeyDown (KeyCode.vk_d) && (s.Direction == DirectionEnum.Up || s.Direction == DirectionEnum.Down))
 			{
 				s.Direction = DirectionEnum.Right;
 			}
-			else if ((SwinGame.KeyDown (KeyCode.vk_w) || SwinGame.KeyDown(KeyCode.vk_UP)) && (s.Direction == DirectionEnum.Right || s.Direction == DirectionEnum.Left))
+			else if (SwinGame.KeyDown (KeyCode.vk_w) && (s.Direction == DirectionEnum.Right || s.Direction == DirectionEnum.Left))
 			{
 				s.Direction = DirectionEnum.Up;
 			}
-			else if ((SwinGame.KeyDown (KeyCode.vk_s) || SwinGame.KeyDown(KeyCode.vk_DOWN)) && (s.Direction == DirectionEnum.Right || s.Direction == DirectionEnum.Left))
+			else if (SwinGame.KeyDown (KeyCode.vk_s) && (s.Direction == DirectionEnum.Right || s.Direction == DirectionEnum.Left))
 			{
 				s.Direction = DirectionEnum.Down;
 			}
@@ -884,10 +740,8 @@ namespace MyGame
 			{
 				currentState = GameState.ViewingMenu;
 				SwinGame.StopMusic ();
-				SwinGame.PlayMusic ("Lotus Land.mp3");
 				menu.ResetTitle ();
 				s.ResetSnake ();
-				f.GenerateRan ();
 			}
 		}
 
@@ -913,22 +767,9 @@ namespace MyGame
 
 		}
 
-		public void SnakeCheckItself()
-		{
-			for (int i = 1; i < s.SnakeParts.Count - 1; i++)
-			{
-				if (s.SnakeParts [i].X == s.Head.X && s.SnakeParts [i].Y == s.Head.Y)
-				{
-					SwinGame.PlaySoundEffect ("crashitself.wav");
-					SwinGame.Delay (2000);
-					currentState = GameState.GameOver;
-					break;
-				}
-			}
-		}
 
 
-		   /*	public void SnakeCheckWalls(Snake s)
+		/*	public void SnakeCheckWalls(Snake s)
 			{ 
 				if (s.Direction == DirectionEnum.Up) {
 					if (s.Head.Y < 0) {
@@ -949,5 +790,4 @@ namespace MyGame
 				}
 			}*/
 	}
-
 }

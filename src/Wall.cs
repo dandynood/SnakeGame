@@ -130,24 +130,6 @@ namespace MyGame
 			SwinGame.FillRectangle (Color.Grey, wall6_x*TileWidth, TileHeight*wall6_w, wall6_width1*TileWidth, TileHeight*wall6_lenght1);
 			SwinGame.FillRectangle (Color.Grey, wall4_w*TileWidth, TileHeight*wall6_y, wall6_width2*TileWidth, TileHeight*wall6_lenght2);
 		}
-			
-		public void InvertedWallLevel1 ()
-		{
-			SwinGame.FillRectangle (Color.White, wall1_x*TileWidth, wall1_y*TileHeight, TileWidth*wall1_width, TileHeight*wall1_lenght);
-			SwinGame.FillRectangle (Color.White, wall2_x*TileWidth, wall2_y*TileHeight, TileWidth*wall1_width, TileHeight*wall1_lenght);
-		}
-
-		public void InvertedWallLevel2()
-		{
-			SwinGame.FillRectangle (Color.White, wall3_x*TileWidth, wall3_y*TileWidth, wall3_width2*TileWidth, TileHeight*wall3_lenght2);
-			SwinGame.FillRectangle (Color.White, wall3_x*TileWidth, wall3_y*TileWidth, wall3_width1*TileWidth, TileHeight*wall3_lenght1);
-			SwinGame.FillRectangle (Color.White, wall4_x*TileWidth, wall4_y*TileHeight, wall4_width1*TileWidth, TileHeight*wall4_lenght1);
-			SwinGame.FillRectangle (Color.White, wall4_w*TileWidth, wall4_y*TileHeight, wall4_width2*TileWidth, TileHeight*wall4_lenght2);
-			SwinGame.FillRectangle (Color.White, wall5_x*TileWidth, TileHeight*wall5_w, wall5_width1*TileWidth, TileHeight*wall5_lenght1);
-			SwinGame.FillRectangle (Color.White, wall5_x*TileWidth, TileHeight*wall5_y, wall5_width2*TileWidth, TileHeight*wall5_lenght2);
-			SwinGame.FillRectangle (Color.White, wall6_x*TileWidth, TileHeight*wall6_w, wall6_width1*TileWidth, TileHeight*wall6_lenght1);
-			SwinGame.FillRectangle (Color.White, wall4_w*TileWidth, TileHeight*wall6_y, wall6_width2*TileWidth, TileHeight*wall6_lenght2);
-		}
 
 	}
 }

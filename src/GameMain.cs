@@ -13,7 +13,7 @@ namespace MyGame
             SwinGame.OpenGraphicsWindow("GameMain", 800, 600);
            // SwinGame.ShowSwinGameSplashScreen();
 			GameController control = new GameController ();
-			SwinGame.PlayMusic ("Lotus Land.mp3");
+
             //Run the game loop
 			while (!(SwinGame.WindowCloseRequested() == true || control.CurrentState == GameState.QuitProgram))
             {
@@ -23,7 +23,7 @@ namespace MyGame
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.White);
 
-                //SwinGame.DrawFramerate(0,0);
+                SwinGame.DrawFramerate(0,0);
 
 				control.PlayGame ();
 

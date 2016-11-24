@@ -62,46 +62,6 @@ namespace MyGame
 		     i = (rnd.Next (1, 7));
 		}
 
-		//Methods of Drawing the fruit
-		public void Draw()
-		{
-			
-			//SwinGame.FillRectangle (_color, _x*TileWidth, _y*TileHeight,TileHeight, TileWidth);
-
-			if (i == 1) 
-			{
-				SwinGame.DrawBitmap ("apple.png", _x * TileWidth-7, _y * TileHeight-10);
-			} 
-			else if (i == 2) 
-			{
-				SwinGame.DrawBitmap ("cherry.png", _x * TileWidth-7, _y * TileHeight-10);
-			} 
-			else if (i == 3)
-			{
-				SwinGame.DrawBitmap ("mango.png", _x * TileWidth-7, _y * TileHeight-10);
-			} 
-			else if (i == 4)
-			{
-				SwinGame.DrawBitmap ("watermellon.png", _x * TileWidth-7, _y * TileHeight-10);
-			} 
-			else if (i == 5) 
-			{
-				SwinGame.DrawBitmap ("strawberry.png", _x * TileWidth-7, _y * TileHeight-10);
-			}
-			else if (i == 6) 
-			{
-				SwinGame.DrawBitmap ("orange.png", _x * TileWidth-7, _y * TileHeight-10);
-			}
-			else if (i == 7) 
-			{
-				SwinGame.DrawBitmap ("applegreen.png", _x * TileWidth-7, _y * TileHeight-10);
-			}
-			else if (i == 8) 
-			{
-				SwinGame.DrawBitmap ("peach.png", _x * TileWidth-7, _y * TileHeight-10);
-			}
-		}
-
 		public void GenerateRanLevel1 (Snake s, Wall w)
 		{
 			do {
@@ -132,7 +92,32 @@ namespace MyGame
 
 		}
 
-		//Ernest: Added codes to fix fruits on wall bugs
+		//Methods of Drawing the fruit
+		public void Draw ()
+		{
+
+			//SwinGame.FillRectangle (_color, _x*TileWidth, _y*TileHeight,TileHeight, TileWidth);
+
+			if (i == 1) {
+				SwinGame.DrawBitmap ("apple.png", _x * TileWidth - 7, _y * TileHeight - 10);
+			} else if (i == 2) {
+				SwinGame.DrawBitmap ("cherry.png", _x * TileWidth - 7, _y * TileHeight - 10);
+			} else if (i == 3) {
+				SwinGame.DrawBitmap ("mango.png", _x * TileWidth - 7, _y * TileHeight - 10);
+			} else if (i == 4) {
+				SwinGame.DrawBitmap ("watermellon.png", _x * TileWidth - 7, _y * TileHeight - 10);
+			} else if (i == 5) {
+				SwinGame.DrawBitmap ("strawberry.png", _x * TileWidth - 7, _y * TileHeight - 10);
+			} else if (i == 6) {
+				SwinGame.DrawBitmap ("orange.png", _x * TileWidth - 7, _y * TileHeight - 10);
+			} else if (i == 7) {
+				SwinGame.DrawBitmap ("applegreen.png", _x * TileWidth - 7, _y * TileHeight - 10);
+			} else if (i == 8) {
+				SwinGame.DrawBitmap ("peach.png", _x * TileWidth - 7, _y * TileHeight - 10);
+			}
+		}
+
+				//Ernest: Added codes to fix fruits on wall bugs
 		public bool SnakeCheckFruitLevel1 (Snake s, Wall w)
 		{
 			// Check for Wall 1
@@ -215,6 +200,11 @@ namespace MyGame
 
 
 		}
+		
+
+
+
+
 
 
 

@@ -128,7 +128,19 @@ namespace MyGame
 		public void IncreaseLenght()
 		{
 			int index = _snakeParts.Count - 1;
-			_snakeParts.Add( new SnakePart(_snakeParts[index].X, _snakeParts[index].Y));
+
+			//Ernest: Added codes to fix check itself bug
+			if (_direction == DirectionEnum.Left) {
+				_snakeParts.Add (new SnakePart (_snakeParts [index].X + 1, _snakeParts [index].Y));
+			} else if (_direction == DirectionEnum.Right) {
+				_snakeParts.Add (new SnakePart (_snakeParts [index].X - 1, _snakeParts [index].Y));
+			} else if (_direction == DirectionEnum.Up) {
+				_snakeParts.Add (new SnakePart (_snakeParts [index].X, _snakeParts [index].Y + 1));
+			} else if (_direction == DirectionEnum.Down) {
+				_snakeParts.Add (new SnakePart (_snakeParts [index].X, _snakeParts [index].Y - 1));
+			}
+
+
 			_lengthcount++;
 		}
 

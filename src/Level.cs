@@ -43,25 +43,6 @@ namespace MyGame
 
 		}
 
-		public void DrawInvertLevel1()
-		{
-			Wall DWall = new Wall ();
-			DWall.InvertedWallLevel1 ();
-		}
-
-		public void DrawInvertLevel2()
-		{
-			Wall DWall = new Wall ();
-			DWall.InvertedWallLevel2 ();
-		}
-
-		public void DrawInvertLevel3()
-		{
-			Wall DWall = new Wall ();
-			DWall.InvertedWallLevel1 ();
-			DWall.InvertedWallLevel2 ();
-		}
-
 		public bool isAt(float X, float Y)
 		{
 			return false;
