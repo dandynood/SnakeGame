@@ -168,7 +168,7 @@ namespace MyGame
 				}
 				else if (menu.OptionSelected == 16)
 				{
-					SwinGame.DrawBitmap("GameInstruction.png", 460, 245);
+					SwinGame.DrawBitmap("GameInstructionnew.png", 460, 245);
 				}
 				delaytitle += timetitle;
 								
