@@ -208,32 +208,6 @@ C:\Users\User\Desktop\Pass Task 11\bin\Debug\SwinGame.dll
 C:\Users\User\Desktop\Pass Task 11\bin\Debug\nunit.framework.xml
 C:\Users\User\Desktop\Pass Task 11\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\Pass Task 11\obj\x86\Debug-Windows\MyGame.exe
-C:\Users\User\SnakeGame\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
-C:\Users\User\SnakeGame\obj\x86\Debug-Windows\MyGame.exe
-C:\Users\User\SnakeGame\bin\Debug\Resources\animations\startup.txt
-C:\Users\User\SnakeGame\bin\Debug\Resources\bundles\FileDialog.txt
-C:\Users\User\SnakeGame\bin\Debug\Resources\bundles\splash.txt
-C:\Users\User\SnakeGame\bin\Debug\Resources\fonts\arial.ttf
-C:\Users\User\SnakeGame\bin\Debug\Resources\fonts\cour.ttf
-C:\Users\User\SnakeGame\bin\Debug\Resources\fonts\maven_pro_regular.ttf
-C:\Users\User\SnakeGame\bin\Debug\Resources\images\fdFile.png
-C:\Users\User\SnakeGame\bin\Debug\Resources\images\fdFolder.png
-C:\Users\User\SnakeGame\bin\Debug\Resources\images\FileDialog_Active.png
-C:\Users\User\SnakeGame\bin\Debug\Resources\images\FileDialog_Background.png
-C:\Users\User\SnakeGame\bin\Debug\Resources\images\FileDialog_Inactive.png
-C:\Users\User\SnakeGame\bin\Debug\Resources\images\FileDialog_Scroll.png
-C:\Users\User\SnakeGame\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
-C:\Users\User\SnakeGame\bin\Debug\Resources\images\Swinburne.jpg
-C:\Users\User\SnakeGame\bin\Debug\Resources\images\SwinGameAni.png
-C:\Users\User\SnakeGame\bin\Debug\Resources\panels\FileDialog.txt
-C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\error.wav
-C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\SwinGameStart.wav
-C:\Users\User\SnakeGame\bin\Debug\Resources\SwinGame.icns
-C:\Users\User\SnakeGame\bin\Debug\Resources\SwinGame.ico
-C:\Users\User\SnakeGame\bin\Debug\MyGame.exe
-C:\Users\User\SnakeGame\bin\Debug\nunit.framework.dll
-C:\Users\User\SnakeGame\bin\Debug\SwinGame.dll
-C:\Users\User\SnakeGame\bin\Debug\nunit.framework.xml
 C:\Users\HP\SnakeGame\bin\Debug\Resources\animations\startup.txt
 C:\Users\HP\SnakeGame\bin\Debug\Resources\bundles\FileDialog.txt
 C:\Users\HP\SnakeGame\bin\Debug\Resources\bundles\splash.txt
@@ -419,3 +393,96 @@ C:\addpower\SnakeGame\bin\Debug\Resources\images\question.png
 C:\addpower\SnakeGame\bin\Debug\Resources\images\scissors.png
 C:\addpower\SnakeGame\bin\Debug\Resources\images\turtle.png
 C:\addpower\SnakeGame\bin\Debug\Resources\images\multiplyfruit-inverted.jpg
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Quittext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Settingstext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Playtext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Easytext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Hardtext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Mediumtext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Credits.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Music.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\End game.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Resume.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\pausetext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\go.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Level.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\level1.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\one.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\three.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\two.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\apple.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\applegreen.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\cherry.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\mango.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\peach.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\strawberry.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\watermellon.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\orange.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\gameover.gif
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\eyes.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\eyesupdown.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\level2.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\level3.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevel.gif
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevel0.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevel1.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevel2.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevel3.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevel50.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevelgo.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\finallevelslash.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\level0.gif
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\megalovania snake.mp3
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\mute.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\horrordrone.mp3
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\crash.wav
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\bump.aiff
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\Maple Dream.mp3
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\game over.mp3
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\Eternal Shrine Maiden.mp3
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\Lotus Land.mp3
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\Selene Light.mp3
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\Alice Maestra.mp3
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\menubackground.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\snakecredit.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\tutorialtext.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Lvl1.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Lvl2.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Lvl3.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Title.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\copyright.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\crashitself.wav
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\GameInstructionnew.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\lightning.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\multiplyfruit.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\plus3.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\question.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\scissors.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\turtle.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\multiplyfruit-inverted.jpg
+C:\Users\User\SnakeGame\bin\Debug\Resources\animations\startup.txt
+C:\Users\User\SnakeGame\bin\Debug\Resources\bundles\FileDialog.txt
+C:\Users\User\SnakeGame\bin\Debug\Resources\bundles\splash.txt
+C:\Users\User\SnakeGame\bin\Debug\Resources\fonts\arial.ttf
+C:\Users\User\SnakeGame\bin\Debug\Resources\fonts\cour.ttf
+C:\Users\User\SnakeGame\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\fdFile.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\fdFolder.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\FileDialog_Active.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\FileDialog_Background.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\FileDialog_Inactive.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\FileDialog_Scroll.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\Swinburne.jpg
+C:\Users\User\SnakeGame\bin\Debug\Resources\images\SwinGameAni.png
+C:\Users\User\SnakeGame\bin\Debug\Resources\panels\FileDialog.txt
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\error.wav
+C:\Users\User\SnakeGame\bin\Debug\Resources\sounds\SwinGameStart.wav
+C:\Users\User\SnakeGame\bin\Debug\Resources\SwinGame.icns
+C:\Users\User\SnakeGame\bin\Debug\Resources\SwinGame.ico
+C:\Users\User\SnakeGame\bin\Debug\MyGame.exe
+C:\Users\User\SnakeGame\bin\Debug\nunit.framework.dll
+C:\Users\User\SnakeGame\bin\Debug\SwinGame.dll
+C:\Users\User\SnakeGame\bin\Debug\nunit.framework.xml
+C:\Users\User\SnakeGame\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+C:\Users\User\SnakeGame\obj\x86\Debug-Windows\MyGame.exe
