@@ -220,6 +220,7 @@ namespace MyGame
 			}
 			else if (currentState == GameState.Pause)
 			{
+				timer2.Start ();
 				if (previouState == GameState.Level1)
 				{
 					SwinGame.ClearScreen (Color.LightGreen);
@@ -285,6 +286,7 @@ namespace MyGame
 					multiplyfruit3 = false;
 				}
 
+				delaytitle = timetitle;
 			}
 			else if (currentState == GameState.Level1)
 			{
