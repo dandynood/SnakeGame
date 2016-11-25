@@ -24,7 +24,10 @@ namespace MyGame
                 SwinGame.ClearScreen(Color.White);
 
                 //SwinGame.DrawFramerate(0,0);
-
+				if(SwinGame.KeyDown(KeyCode.vk_F4))
+				{
+					SwinGame.ToggleFullScreen ();	
+				}
 				control.PlayGame ();
 
 				// Has to go after ClearScreen and NOT before refreshscreen

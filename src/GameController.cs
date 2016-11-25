@@ -1026,7 +1026,7 @@ namespace MyGame
 				SwinGame.SetMusicVolume (0.7F);
 				SwinGame.PlayMusic ("Maple Dream.mp3");
 				menu.ResetTitle ();
-				while (i < 15)
+				while (i < 20)
 				{
 					SwinGame.ClearScreen (Color.White);
 					s.DrawWin ();
@@ -1035,11 +1035,16 @@ namespace MyGame
 					i++;
 				}
 				s.ResetSnake ();
+				counter = 0;
 				delay = resetsetting;
 				time = resetsetting;
 				timer.Interval = resetsetting;
 				currentState = GameState.ViewingCredits;
 				previouState = GameState.ViewingMenu;
+
+				powerupcounter = 0;
+				multiplyfruit2 = false;
+				multiplyfruit3 = false;
 			}
 			else if (previouState == GameState.Level0 && currentState == GameState.GameOver)
 			{
