@@ -13,7 +13,8 @@ namespace MyGame
 		private MenuController menu;
 		private Level level;
 		private Fruit f;
-		Wall w;
+		private PowerUp p;
+	    Wall w;
 		private int delay = 80;
 		private int time = 80;
 		private int resetsetting = 80;
@@ -26,6 +27,22 @@ namespace MyGame
 		int level3limit = 40;
 		int level0limit = 50;
 
+		private int storeRandPowerUp;
+		private int powerupcounter = 0;
+		Random randPowerup;
+		private int powerUpDecider;
+		private int questionDeicider;
+
+		private int DifficultyPowerups;
+
+		private Fruit f2;
+		private Fruit f3;
+		private bool multiplyfruit2 = false;
+		private bool multiplyfruit3 = false;
+		private bool show3 = false;
+
+		private int deletePowerUps = 0;
+
  		const int Counter_Left= 375;
 		const int Counter_Top=0;
 		System.Timers.Timer timer2 = new System.Timers.Timer();
@@ -34,13 +51,37 @@ namespace MyGame
 		public GameController ()
 		{
 			f = new Fruit ();
+
+			//Added for powerups
+			f2 = new Fruit ();
+			f3 = new Fruit ();
+			DifficultyPowerups = 2;
+			randPowerup = new Random ((int)DateTime.Now.Ticks);
+		
+
 			level = new Level ();
 			s = new Snake ();
 			menu = new MenuController ();
 			w = new Wall ();
+			p = new PowerUp ();
 			menu.SettingSelected = 2;
 			currentState = GameState.ViewingMenu;
-			f.GenerateRan ();
+
+
+			f.GenerateRanLevel3 (w);
+			f2.GenerateRanLevel3 (w);
+			f3.GenerateRanLevel3 (w);
+
+			f2.X = (randPowerup.Next (0, 31));
+			f2.Y = (randPowerup.Next (0, 23));
+			f2.I = (randPowerup.Next (0, 7));
+
+
+			p.GenerateRanPowerUpLevel1 (w,currentState);
+
+		
+			powerUpDecider = (randPowerup.Next (10, 20));
+
 			SwinGame.LoadMusic ("megalovania snake.mp3");
 			SwinGame.LoadMusic ("Eternal Shrine Maiden.mp3");
 			SwinGame.LoadMusic ("Maple Dream.mp3");
@@ -133,6 +174,7 @@ namespace MyGame
 					menu.DrawSettings ();
 					menu.ResetTitle ();
 					menu.OptionSelected = 0;
+					DifficultyPowerups = 1;
 				}
 				else if (menu.OptionSelected == 5)
 				{
@@ -144,6 +186,7 @@ namespace MyGame
 					menu.DrawSettings ();
 					menu.ResetTitle ();
 					menu.OptionSelected = 0;
+					DifficultyPowerups = 2;
 				}
 				else if (menu.OptionSelected == 6)
 				{
@@ -155,6 +198,8 @@ namespace MyGame
 					menu.DrawSettings ();
 					menu.ResetTitle ();
 					menu.OptionSelected = 0;
+					DifficultyPowerups = 3;
+					
 				}
 				else if (menu.OptionSelected == 7)
 				{
@@ -231,8 +276,13 @@ namespace MyGame
 					menu.ResetTitle ();
 					s.ResetSnake ();
 					counter = 0;
-					delay = time;
-					delaytitle = timetitle;
+					delay = resetsetting;
+					delaytitle = resetsetting;
+					timer.Interval = resetsetting;
+
+					powerupcounter = 0;
+					multiplyfruit2 = false;
+					multiplyfruit3 = false;
 				}
 
 			}
@@ -247,6 +297,48 @@ namespace MyGame
 
 				HandleUserInput ();
 				delay += time;
+
+				if (powerupcounter > powerUpDecider) {
+
+					p.Draw (currentState);
+					SnakeCheckPowerUp ();
+		
+
+				}
+			
+
+				if (multiplyfruit2 == true) {
+					f2.Draw ();
+					SnakeCheckFruit2 ();
+				}
+
+				if (multiplyfruit3 == true) {
+					f3.Draw ();
+					SnakeCheckFruit3 ();
+				} else {
+
+					f3.GenerateRanLevel3 (w);
+
+				}
+
+				if (deletePowerUps > 10) {
+
+					p.GenerateRanPowerUpLevel1 (w,currentState);
+					powerupcounter = 0;
+					powerUpDecider = (randPowerup.Next (10, 20));
+					deletePowerUps = 0;
+
+				}
+
+				if (show3 == true) {
+					SwinGame.DrawBitmap ("plus3.png", 340, 30);
+				}
+
+				if (powerupcounter > 0) {
+					show3 = false;
+				}
+
+
 
 				SnakeCheckWallLevel1 ();
 				SnakeCheckFruit ();
@@ -267,6 +359,48 @@ namespace MyGame
 				HandleUserInput ();
 
 				delay += time;
+
+				if (powerupcounter > powerUpDecider) {
+
+					p.Draw (currentState);
+					SnakeCheckPowerUp ();
+
+
+				}
+
+
+				if (multiplyfruit2 == true) {
+					f2.Draw ();
+					SnakeCheckFruit2 ();
+				}
+
+				if (multiplyfruit3 == true) {
+					f3.Draw ();
+					SnakeCheckFruit3 ();
+				} else {
+
+					f3.GenerateRanLevel3 (w);
+
+				}
+
+				if (deletePowerUps > 10) {
+
+					p.GenerateRanPowerUpLevel2 (w,currentState);
+					powerupcounter = 0;
+					powerUpDecider = (randPowerup.Next (10, 20));
+					deletePowerUps = 0;
+
+				}
+
+				if (show3 == true) {
+					SwinGame.DrawBitmap ("plus3.png", 340, 30);
+				}
+
+				if (powerupcounter > 0) {
+					show3 = false;
+				}
+
+
 				SnakeCheckWallLevel2 ();
 				SnakeCheckFruit ();
 				SnakeCheckSides ();
@@ -284,6 +418,48 @@ namespace MyGame
 
 				HandleUserInput ();
 
+				if (powerupcounter > powerUpDecider) {
+
+					p.Draw (currentState);
+					SnakeCheckPowerUp ();
+
+
+				}
+
+
+				if (multiplyfruit2 == true) {
+					f2.Draw ();
+					SnakeCheckFruit2 ();
+				}
+
+				if (multiplyfruit3 == true) {
+					f3.Draw ();
+					SnakeCheckFruit3 ();
+				} else {
+
+					f3.GenerateRanLevel3 (w);
+
+				}
+
+				if (deletePowerUps > 10) {
+
+					p.GenerateRanPowerUpLevel3 (w,currentState);
+					powerupcounter = 0;
+					powerUpDecider = (randPowerup.Next (10, 20));
+					deletePowerUps = 0;
+
+				}
+
+				if (show3 == true) {
+					SwinGame.DrawBitmap ("plus3.png", 340, 30);
+				}
+
+				if (powerupcounter > 0) {
+					show3 = false;
+				}
+
+
+
 				delay += time;
 				SnakeCheckWallLevel3 ();
 				SnakeCheckFruit ();
@@ -298,17 +474,64 @@ namespace MyGame
 				{
 					level.DrawInvertLevel1 ();
 					SnakeCheckWallLevel1 ();
+				
+
 				}
 				else if (counter >= 20 && counter < 30 && currentState == GameState.Level0)
 				{
 					level.DrawInvertLevel2 ();
 					SnakeCheckWallLevel2 ();
+				
 				}
 				else if (counter >= 30 && counter < 40 && currentState == GameState.Level0)
 				{
 					level.DrawInvertLevel3 ();
 					SnakeCheckWallLevel3 ();
+
 				}
+
+				if (powerupcounter > powerUpDecider) {
+
+					p.Draw (currentState);
+					SnakeCheckPowerUpLevel0 ();
+
+
+				}
+
+
+				if (multiplyfruit2 == true) {
+					f2.Draw ();
+					SnakeCheckFruit2 ();
+				}
+
+				if (multiplyfruit3 == true) {
+					f3.Draw ();
+					SnakeCheckFruit3 ();
+				} else {
+
+					f3.GenerateRanLevel3 (w);
+
+				}
+
+				if (deletePowerUps > 10) {
+
+					p.GenerateRanPowerUpLevel3 (w,currentState);
+					powerupcounter = 0;
+					powerUpDecider = (randPowerup.Next (10, 20));
+					deletePowerUps = 0;
+
+				}
+
+				if (show3 == true) {
+					SwinGame.DrawBitmap ("plus3.png", 340, 30);
+				}
+
+				if (powerupcounter > 0) {
+					show3 = false;
+				}
+
+
+
 
 				s.DrawInvert ();
 				f.Draw ();
@@ -369,7 +592,12 @@ namespace MyGame
 				delay = resetsetting;
 				time = resetsetting;
 				delaytitle = timetitle;
+				timer.Interval = resetsetting;
 				HandleUserGameOverInput ();
+
+				powerupcounter = 0;
+				multiplyfruit2 = false;
+				multiplyfruit3 = false;
 			}
 			else if (currentState == GameState.AnnouceGame)
 			{
@@ -378,17 +606,17 @@ namespace MyGame
 				if (previouState == GameState.Level1)
 				{
 					level.Drawlevel1 ();
-					f.GenerateRanLevel1 (s, w);
+					f.GenerateRanLevel1 ( w);
 				}
 				else if (previouState == GameState.Level2)
 				{
 					level.Drawlevel2 ();
-					f.GenerateRanLevel2 (s, w);
+					f.GenerateRanLevel2 ( w);
 				}
 				else if (previouState == GameState.Level3)
 				{
 					level.Drawlevel3 ();
-					f.GenerateRanLevel3 (s, w);
+					f.GenerateRanLevel3 (w);
 				}
 				else if (previouState == GameState.Level0)
 				{
@@ -652,19 +880,19 @@ namespace MyGame
 				s.IncreaseLenght ();
 				if (currentState == GameState.Level1)
 				{
-					f.GenerateRanLevel1 (s, w);
+					f.GenerateRanLevel1 ( w);
 				}
 				else if (currentState == GameState.Level2)
 				{
-					f.GenerateRanLevel2 (s, w);
+					f.GenerateRanLevel2 ( w);
 				}
 				else if (currentState == GameState.Level3)
 				{
-					f.GenerateRanLevel3 (s, w);
+					f.GenerateRanLevel3 ( w);
 				}
 				else if (currentState == GameState.Level0)
 				{
-					f.GenerateRanLevel3 (s, w);
+					f.GenerateRanLevel3 ( w);
 				}
 
 				Counter ();
@@ -728,7 +956,7 @@ namespace MyGame
 
 		public void GameStateControl()
 		{
-			if (counter == level1limit && currentState == GameState.Level1)
+			if (counter >= level1limit && currentState == GameState.Level1)
 			{
 				SwinGame.FadeMusicOut (2500);
 				SwinGame.Delay (2000);
@@ -738,12 +966,17 @@ namespace MyGame
 				s.Head.Y = 10;
 				delay = resetsetting;
 				time = resetsetting;
-				f.GenerateRanLevel2 (s, w);
+				f.GenerateRanLevel2 ( w);
 				currentState = GameState.AnnouceGame;
 				previouState = GameState.Level2;
 
+				powerupcounter = 0;
+				multiplyfruit2 = false;
+				multiplyfruit3 = false;
+				p.GenerateRanPowerUpLevel2 (w,currentState);
+
 			}
-			else if (counter == level2limit && currentState == GameState.Level2)
+			else if (counter >= level2limit && currentState == GameState.Level2)
 			{
 				SwinGame.FadeMusicOut (2500);
 				SwinGame.Delay (2000);
@@ -753,12 +986,17 @@ namespace MyGame
 				s.Head.Y = 10;
 				delay = resetsetting;
 				time = resetsetting;
-				f.GenerateRanLevel3 (s, w);
+				f.GenerateRanLevel3 ( w);
 				currentState = GameState.AnnouceGame;
 				previouState = GameState.Level3;
+
+				powerupcounter = 0;
+				multiplyfruit2 = false;
+				multiplyfruit3 = false;
+				p.GenerateRanPowerUpLevel3 (w,currentState);
 			
 			}
-			else if (counter == level3limit && currentState == GameState.Level3)
+			else if (counter >= level3limit && currentState == GameState.Level3)
 			{
 				SwinGame.FadeMusicOut (2500);
 				SwinGame.Delay (2000);
@@ -768,15 +1006,19 @@ namespace MyGame
 				s.Head.Y = 11;
 				delay = 50;
 				time = 50;
-				f.GenerateRanLevel3 (s, w);
-				timer.Interval = delay;
+				f.GenerateRanLevel3 ( w);
+				timer.Interval = 50;
 				currentState = GameState.AnnouceGame;
 				previouState = GameState.Level0;
 				SwinGame.ClearScreen (Color.Black);
 				s.Draw ();
 				SwinGame.Delay (3000);
+
+				powerupcounter = 0;
+				multiplyfruit2 = false;
+				multiplyfruit3 = false;
 			}
-			else if (counter == level0limit && currentState == GameState.Level0)
+			else if (counter >= level0limit && currentState == GameState.Level0)
 			{
 				SwinGame.StopMusic ();
 				SwinGame.Delay (2000);
@@ -858,18 +1100,34 @@ namespace MyGame
 			if ((SwinGame.KeyDown (KeyCode.vk_a) || SwinGame.KeyDown(KeyCode.vk_LEFT)) && (s.Direction == DirectionEnum.Up || s.Direction == DirectionEnum.Down))
 			{
 				s.Direction = DirectionEnum.Left;
+				powerupcounter++;
+				if (powerupcounter > powerUpDecider) {
+					deletePowerUps++;
+				}
 			}
 			else if ((SwinGame.KeyDown (KeyCode.vk_d) || SwinGame.KeyDown(KeyCode.vk_RIGHT)) && (s.Direction == DirectionEnum.Up || s.Direction == DirectionEnum.Down))
 			{
 				s.Direction = DirectionEnum.Right;
+				powerupcounter++;
+				if (powerupcounter > powerUpDecider) {
+					deletePowerUps++;
+				}
 			}
 			else if ((SwinGame.KeyDown (KeyCode.vk_w) || SwinGame.KeyDown(KeyCode.vk_UP)) && (s.Direction == DirectionEnum.Right || s.Direction == DirectionEnum.Left))
 			{
 				s.Direction = DirectionEnum.Up;
+				powerupcounter++;
+				if (powerupcounter > powerUpDecider) {
+					deletePowerUps++;
+				}
 			}
 			else if ((SwinGame.KeyDown (KeyCode.vk_s) || SwinGame.KeyDown(KeyCode.vk_DOWN)) && (s.Direction == DirectionEnum.Right || s.Direction == DirectionEnum.Left))
 			{
 				s.Direction = DirectionEnum.Down;
+				powerupcounter++;
+				if (powerupcounter > powerUpDecider) {
+					deletePowerUps++;
+				}
 			}
 			else if (SwinGame.KeyDown (KeyCode.vk_ESCAPE))
 			{
@@ -927,27 +1185,330 @@ namespace MyGame
 			}
 		}
 
+		public void ResetSpeedLevel1 ()
+		{
 
-		   /*	public void SnakeCheckWalls(Snake s)
-			{ 
-				if (s.Direction == DirectionEnum.Up) {
-					if (s.Head.Y < 0) {
-						SwinGame.DrawText ("GAME OVER!", Color.Blue, 365, 280);
+			if (DifficultyPowerups == 1) {
+				time = 100;
+				timer.Interval = 100;
+			} else if (DifficultyPowerups == 2) {
+				timer.Interval = 80;
+				timer.Interval = 80;
+			} else if (DifficultyPowerups == 3) {
+				timer.Interval = 50;
+				timer.Interval = 50;
+			}
+
+
+		}
+
+		public void SnakeCheckPowerUpLevel0 ()
+		{
+			if (s.Head.X == p.X & s.Head.Y == p.Y && p.PowerUpID == 3) {
+				multiplyfruit2 = true;
+				multiplyfruit3 = true;
+				p.GenerateRanPowerUpLevel1 (w,currentState);
+				powerupcounter = 0;
+				powerUpDecider = (randPowerup.Next (10, 20));
+				SwinGame.PlaySoundEffect ("bump.aiff", 0.6F);
+			}
+		}
+
+
+		   
+		public void SnakeCheckPowerUp ()
+		{
+			if (s.Head.X == p.X & s.Head.Y == p.Y && p.PowerUpID == 1) {
+
+				Random Rand = new Random ();
+				storeRandPowerUp = (Rand.Next (0, 2));
+
+				if (storeRandPowerUp == 0) {
+
+
+
+					p.GenerateRanPowerUpLevel1 (w,currentState);
+					powerupcounter = 0;
+
+					if (DifficultyPowerups == 1 ) {
+						time = 70;
+						timer.Interval = 70;
+					} else if (DifficultyPowerups == 2) {
+						timer.Interval = 50;
+						timer.Interval = 50;
+					} else if (DifficultyPowerups == 3 ) {
+						timer.Interval = 35;
+						timer.Interval = 35;
 					}
-				} else if (s.Direction == DirectionEnum.Down) {
-					if (s.Head.Y > 24) {
-						SwinGame.DrawText ("GAME OVER!", Color.Blue, 365, 280);
+
+
+				} else {
+
+					Counter ();
+					Counter ();
+					Counter ();
+					show3 = true;
+
+					ResetSpeedLevel1 ();
+
+					p.GenerateRanPowerUpLevel1 (w,currentState);
+					powerupcounter = 0;
+				}
+
+				powerUpDecider = (randPowerup.Next (10, 20));
+
+
+				SwinGame.PlaySoundEffect ("bump.aiff", 0.6F);
+
+			} else if (s.Head.X == p.X & s.Head.Y == p.Y && p.PowerUpID == 2) {
+
+
+				if (DifficultyPowerups == 1 ) {
+					time = 140;
+					timer.Interval = 140;
+				} else if (DifficultyPowerups == 2) {
+					timer.Interval = 120;
+					timer.Interval = 120;
+				} else if (DifficultyPowerups == 3 ) {
+					timer.Interval = 90;
+					timer.Interval = 90;
+				}
+				p.GenerateRanPowerUpLevel1 (w,currentState);
+				powerupcounter = 0;
+				powerUpDecider = (randPowerup.Next (10, 20));
+			
+				SwinGame.PlaySoundEffect ("bump.aiff", 0.6F);
+
+			} else if (s.Head.X == p.X & s.Head.Y == p.Y && p.PowerUpID == 3) {
+
+				multiplyfruit2 = true;
+				multiplyfruit3 = true;
+				p.GenerateRanPowerUpLevel1 (w,currentState);
+				powerupcounter = 0;
+				powerUpDecider = (randPowerup.Next (10, 20));
+				ResetSpeedLevel1 ();
+				SwinGame.PlaySoundEffect ("bump.aiff", 0.6F);
+
+			} else if (s.Head.X == p.X & s.Head.Y == p.Y && p.PowerUpID == 4) {
+
+
+				if (s.SnakeParts.Count > 3) {
+					s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
+					s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
+					s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
+				} else if (s.SnakeParts.Count > 2) {
+					s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
+					s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
+				} else if (s.SnakeParts.Count > 1) {
+					s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
+
+				}
+				p.GenerateRanPowerUpLevel1 (w,currentState);
+				powerupcounter = 0;
+				powerUpDecider = (randPowerup.Next (10, 20));
+				ResetSpeedLevel1 ();
+				SwinGame.PlaySoundEffect ("bump.aiff", 0.6F);
+
+			} else if (s.Head.X == p.X & s.Head.Y == p.Y && p.PowerUpID == 5) {
+
+				SwinGame.PlaySoundEffect ("bump.aiff", 0.6F);
+				questionDeicider = (randPowerup.Next (1, 7));
+
+				if (questionDeicider == 1) {
+
+					Counter ();
+					Counter ();
+					Counter ();
+					show3 = true;
+					ResetSpeedLevel1 ();
+
+				} else if (questionDeicider == 2) {
+
+					if (DifficultyPowerups == 1) {
+						time = 140;
+						timer.Interval = 140;
+					} else if (DifficultyPowerups == 2) {
+						timer.Interval = 120;
+						timer.Interval = 120;
+					} else if (DifficultyPowerups == 3) {
+						timer.Interval = 90;
+						timer.Interval = 90;
 					}
-				} else if (s.Direction == DirectionEnum.Right) {
-					if (s.Head.X > 32) {
-						SwinGame.DrawText ("GAME OVER!", Color.Blue, 365, 280);
+
+				} else if (questionDeicider == 3) {
+					
+					s.IncreaseLenght ();
+					s.IncreaseLenght ();
+					s.IncreaseLenght ();
+					s.IncreaseLenght ();
+					ResetSpeedLevel1 ();
+
+
+				} else if (questionDeicider == 4) {
+					multiplyfruit2 = true;
+					multiplyfruit3 = true;
+					ResetSpeedLevel1 ();
+
+				} else if (questionDeicider == 5) {
+
+					p.GenerateRanPowerUpLevel1 (w,currentState);
+					powerupcounter = 0;
+					powerUpDecider = (randPowerup.Next (10, 20));
+					ResetSpeedLevel1 ();
+
+				} else if (questionDeicider == 6) {
+					if (DifficultyPowerups == 1) {
+						time = 70;
+						timer.Interval = 70;
+					} else if (DifficultyPowerups == 2) {
+						timer.Interval = 50;
+						timer.Interval = 50;
+					} else if (DifficultyPowerups == 3) {
+						timer.Interval = 35;
+						timer.Interval = 35;
 					}
-				} else if (s.Direction == DirectionEnum.Left) {
-					if (s.Head.X < 0) {
-						SwinGame.DrawText ("GAME OVER!", Color.Blue, 365, 280);
+
+				}
+
+
+
+				powerupcounter = 0;
+				p.GenerateRanPowerUpLevel1 (w,currentState);
+				powerUpDecider = (randPowerup.Next (10, 20));
+
+
+
+
+			}
+
+		}
+
+
+
+		public void SnakeCheckFruit2 ()
+		{
+			//Created for the sprint work 
+			if (s.Head.X == f2.X && s.Head.Y == f2.Y) {
+				s.IncreaseLenght ();
+
+				if (currentState == GameState.Level1) {
+					f2.GenerateRanLevel1 (w);
+				} else if (currentState == GameState.Level2) {
+					f2.GenerateRanLevel2 (w);
+				} else if (currentState == GameState.Level3) {
+					f2.GenerateRanLevel3 (w);
+				}
+
+				Counter ();
+				multiplyfruit2 = false;
+				SwinGame.PlaySoundEffect ("bump.aiff", 0.6F);
+
+				if (counter == 10 && currentState == GameState.Level0) {
+					for (int i = 0; i < 6; i++) {
+						delay = 45;
+						time = 45;
+						timer.Interval = delay;
+						s.IncreaseLenght ();
 					}
 				}
-			}*/
+
+				if (counter == 20 && currentState == GameState.Level0) {
+					for (int i = 0; i < 7; i++) {
+						s.IncreaseLenght ();
+						delay = 40;
+						time = 40;
+						timer.Interval = delay;
+
+					}
+				}
+
+				if (counter == 30 && currentState == GameState.Level0) {
+					for (int i = 0; i < 8; i++) {
+						s.IncreaseLenght ();
+						delay = 35;
+						time = 35;
+						timer.Interval = delay;
+					}
+				}
+
+				if (counter == 40 && currentState == GameState.Level0) {
+					for (int i = 0; i < 9; i++) {
+						s.IncreaseLenght ();
+						delay = 30;
+						time = 30;
+						timer.Interval = delay;
+					}
+				}
+
+
+
+			}
+
+		}
+
+		public void SnakeCheckFruit3 ()
+		{
+			//Created for the sprint work 
+			if (s.Head.X == f3.X && s.Head.Y == f3.Y) {
+				s.IncreaseLenght ();
+
+				if (currentState == GameState.Level1) {
+					f3.GenerateRanLevel1 (w);
+				} else if (currentState == GameState.Level2) {
+					f3.GenerateRanLevel2 (w);
+				} else if (currentState == GameState.Level3) {
+					f3.GenerateRanLevel3 (w);
+				}
+
+				Counter ();
+				multiplyfruit3 = false;
+
+				SwinGame.PlaySoundEffect ("bump.aiff", 0.6F);
+
+				if (counter == 10 && currentState == GameState.Level0) {
+					for (int i = 0; i < 6; i++) {
+						delay = 45;
+						time = 45;
+						timer.Interval = delay;
+						s.IncreaseLenght ();
+					}
+				}
+
+				if (counter == 20 && currentState == GameState.Level0) {
+					for (int i = 0; i < 7; i++) {
+						s.IncreaseLenght ();
+						delay = 40;
+						time = 40;
+						timer.Interval = delay;
+
+					}
+				}
+
+				if (counter == 30 && currentState == GameState.Level0) {
+					for (int i = 0; i < 8; i++) {
+						s.IncreaseLenght ();
+						delay = 35;
+						time = 35;
+						timer.Interval = delay;
+					}
+				}
+
+				if (counter == 40 && currentState == GameState.Level0) {
+					for (int i = 0; i < 9; i++) {
+						s.IncreaseLenght ();
+						delay = 30;
+						time = 30;
+						timer.Interval = delay;
+					}
+				}
+
+
+
+			}
+
+		}
+
+
 	}
 
 }

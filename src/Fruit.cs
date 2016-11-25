@@ -53,6 +53,16 @@ namespace MyGame
 			set{ _height = value; }
 		}
 
+		public int I {
+			get {
+				return i;
+			}
+
+			set {
+				i = value;
+			}
+		}
+
 		//Methods of random generation the location of fruit
 		public void GenerateRan()
 		{
@@ -102,38 +112,38 @@ namespace MyGame
 			}
 		}
 
-		public void GenerateRanLevel1 (Snake s, Wall w)
+		public void GenerateRanLevel1 ( Wall w)
 		{
 			do {
 
 				GenerateRan ();
 
-			} while (SnakeCheckFruitLevel1 (s, w));
+			} while (SnakeCheckFruitLevel1 ( w));
 
 		}
 
-		public void GenerateRanLevel2 (Snake s, Wall w)
+		public void GenerateRanLevel2 ( Wall w)
 		{
 			do {
 
 				GenerateRan ();
 
-			} while (SnakeCheckFruitLevel2 (s, w));
+			} while (SnakeCheckFruitLevel2 ( w));
 
 		}
 
-		public void GenerateRanLevel3 (Snake s, Wall w)
+		public void GenerateRanLevel3 ( Wall w)
 		{
 			do {
 
 				GenerateRan ();
 
-			} while (SnakeCheckFruitLevel3 (s, w));
+			} while (SnakeCheckFruitLevel3 ( w));
 
 		}
 
 		//Ernest: Added codes to fix fruits on wall bugs
-		public bool SnakeCheckFruitLevel1 (Snake s, Wall w)
+		public bool SnakeCheckFruitLevel1 ( Wall w)
 		{
 			// Check for Wall 1
 
@@ -156,7 +166,7 @@ namespace MyGame
 
 		}
 
-		public bool SnakeCheckFruitLevel2 (Snake s, Wall w)
+		public bool SnakeCheckFruitLevel2 ( Wall w)
 		{
 			// Check for Wall 3
 
@@ -205,9 +215,9 @@ namespace MyGame
 
 		}
 
-		public bool SnakeCheckFruitLevel3 (Snake s, Wall w)
+		public bool SnakeCheckFruitLevel3 (Wall w)
 		{
-			if (SnakeCheckFruitLevel1 (s, w) || SnakeCheckFruitLevel2 (s, w)) {
+			if (SnakeCheckFruitLevel1 ( w) || SnakeCheckFruitLevel2 ( w)) {
 				return true;
 			}
 
