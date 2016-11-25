@@ -50,7 +50,7 @@ Click the Settings button to choose your difficulty, and if you want to listen t
 
 - You can pause using the ESC button, and end the current game or mute too
 
-There are currently ~~4~~ 3 levels in the game that can be played through. If you crash into the wall or yourself, you will lose and have to restart again from the first level.
+There are currently 4 levels in the game that can be played through. If you crash into the wall or yourself, you will lose and have to restart again from the first level.
 
 ### Some screenshots ###
 <p align="center">
