@@ -10,7 +10,7 @@ To get started, open up the MyGame.sln file, using your C# IDE developer tool (s
 
 You can run the MyGame.exe file, located in the bin/Debug folder. First try to do a "rebuild all" from your IDE (under build).
 
-**Note: use 'F4' to toggle in and out of fullscreen**
+**Note: use 'F4' key to toggle in and out of fullscreen**
 
 ### The main menu ###
 
@@ -39,7 +39,7 @@ Click the Settings button to choose your difficulty, and if you want to listen t
 
 - You can use the open sides to cross over to the other side
 
-- Some powerups are available. X3 randomly places 3 extra fruits on the area, the lightning will make you faster, the turtle will make you slower, and the scissors will make reduce a small part of your length, while a random ? block will appear, which causes random effects.
+- Some powerups are available including X3 randomly places 3 extra fruits on the area, the lightning will make you faster, the turtle will make you slower, and the scissors will make reduce a small part of your length, while a random ? block will appear, which causes random effects.
 <p align="left">
 <img src="https://github.com/dandynood/SnakeGame/wiki/images/multiplyfruit.png" alt="Multiply fruit powerup"/>
 <img src="https://github.com/dandynood/SnakeGame/wiki/images/lightning.png" alt="Speed powerup"/>
@@ -48,7 +48,7 @@ Click the Settings button to choose your difficulty, and if you want to listen t
 <img src="https://github.com/dandynood/SnakeGame/wiki/images/question.png" alt="Random"/>
 </p>
 
-- You can pause using the ESC button, and end the current game or mute too
+- You can pause using the "ESC" key, and end the current game or mute too during the game play.
 
 There are currently 4 levels in the game that can be played through. If you crash into the wall or yourself, you will lose and have to restart again from the first level.
 
@@ -63,7 +63,7 @@ There are currently 4 levels in the game that can be played through. If you cras
 
 The game runs using the SwinGame API that was used for this project as everyone in the team is familiar with it.
 
-These are the list of files located in the src folder, and what they do
+These are the list of files located in the src folder, and its functionality
 
 1. GameMain: The main class of the game that has a loop to process events and refresh the screen, and call the PlayGame method from the GameController
 
