@@ -13,3 +13,6 @@ You can run the MyGame.exe file, located in the bin/Debug folder. First try to d
 **Note: use 'F4' to toggle in and out of fullscreen**
 
 
+<p align="center">
+<img src="wiki/images/mainmenu.PNG" alt="Main Menu" />
+</p>
