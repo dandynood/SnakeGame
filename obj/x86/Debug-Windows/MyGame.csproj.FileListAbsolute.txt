@@ -485,5 +485,4 @@ C:\Users\User\SnakeGame\bin\Debug\MyGame.exe
 C:\Users\User\SnakeGame\bin\Debug\nunit.framework.dll
 C:\Users\User\SnakeGame\bin\Debug\SwinGame.dll
 C:\Users\User\SnakeGame\bin\Debug\nunit.framework.xml
-C:\Users\User\SnakeGame\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
 C:\Users\User\SnakeGame\obj\x86\Debug-Windows\MyGame.exe
