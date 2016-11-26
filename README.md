@@ -4,7 +4,7 @@ It consist of a Snake Game with enhanced features and has been developed through
 
 ### Known Bugs ###
 
-Pressing left and right, up and down too fast, may cause the snake to illegaly go backwards, and with a longer snake, will cause an sudden game over.
+Pressing right and down/up may cause the snake to illegaly go backwards, and with a longer snake, will cause an sudden game over.
 
 ## Introduction ##
 
