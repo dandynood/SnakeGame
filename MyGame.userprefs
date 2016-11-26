@@ -11,10 +11,10 @@
       <File FileName="src\SnakePart.cs" Line="1" Column="1" />
       <File FileName="src\DirectionEnum.cs" Line="1" Column="1" />
       <File FileName="src\MenuController.cs" Line="1" Column="1" />
-      <File FileName="src\GameController.cs" Line="1047" Column="28" />
-      <File FileName="src\PowerUp.cs" Line="75" Column="4" />
+      <File FileName="src\GameController.cs" Line="51" Column="14" />
+      <File FileName="src\PowerUp.cs" Line="1" Column="1" />
       <File FileName="src\Fruit.cs" Line="1" Column="1" />
-      <File FileName="src\GameMain.cs" Line="30" Column="6" />
+      <File FileName="src\GameMain.cs" Line="1" Column="1" />
       <File FileName="src\GameState.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

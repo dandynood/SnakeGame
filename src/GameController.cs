@@ -27,7 +27,7 @@ namespace MyGame
 		int level3limit = 40;
 		int level0limit = 50;
 
-		private int storeRandPowerUp;
+		//private int storeRandPowerUp;
 		private int powerupcounter = 0;
 		Random randPowerup;
 		private int powerUpDecider;
@@ -44,9 +44,11 @@ namespace MyGame
 		private int deletePowerUps = 0;
 
  		const int Counter_Left= 375;
-		const int Counter_Top=0;
+		const int Counter_Top=3;
 		System.Timers.Timer timer2 = new System.Timers.Timer();
 		System.Timers.Timer timer = new System.Timers.Timer();
+
+		int win = 0;
 
 		public GameController ()
 		{
@@ -97,7 +99,6 @@ namespace MyGame
 
 			timer2.AutoReset = false;
 			timer2.Elapsed += (sender, e) => menu.MoveTitle ();
-
 		}
 
 
@@ -139,6 +140,16 @@ namespace MyGame
 				menu.DrawButton ();
 				menu.DrawTitle ();
 
+				if (menu.Mute == 1)
+				{
+					SwinGame.PauseMusic ();
+				}
+
+				if (win == 1)
+				{
+					SwinGame.DrawBitmap ("star.png", 18 * 25, 220);
+				}
+
 				timer2.Start ();
 
 				menu.HandleUserInputMenu ();
@@ -146,15 +157,22 @@ namespace MyGame
 
 				if (menu.OptionSelected == 1)
 				{
-					timer2.Stop ();
-					delay = time;
-					s.Head.X = 4;
-					s.Head.Y = 5;
-					s.Direction = DirectionEnum.Right;
-					currentState = GameState.AnnouceGame;
-					previouState = GameState.Level1;
-					SwinGame.FadeMusicOut (2500);
-					menu.OptionSelected = 0;		
+					if (win == 1)
+					{
+						menu.DrawLevelSelect ();
+					}
+					else
+					{
+						timer2.Stop ();
+						delay = time;
+						s.Head.X = 4;
+						s.Head.Y = 5;
+						s.Direction = DirectionEnum.Right;
+						currentState = GameState.AnnouceGame;
+						previouState = GameState.Level1;
+						SwinGame.FadeMusicOut (2500);
+						menu.OptionSelected = 0;
+					}
 				}
 				else if (menu.OptionSelected == 2)
 				{
@@ -171,6 +189,7 @@ namespace MyGame
 					delay = 100;
 					resetsetting = 100;
 					timer.Interval = delay;
+					timer2.Interval = 100;
 					menu.DrawSettings ();
 					menu.ResetTitle ();
 					menu.OptionSelected = 0;
@@ -181,8 +200,9 @@ namespace MyGame
 					menu.SettingSelected = 2;
 					time = 80;
 					delay = 80;
-					resetsetting = 70;
+					resetsetting = 80;
 					timer.Interval = delay;
+					timer2.Interval = 80;
 					menu.DrawSettings ();
 					menu.ResetTitle ();
 					menu.OptionSelected = 0;
@@ -195,6 +215,7 @@ namespace MyGame
 					delay = 50;
 					resetsetting = 50;
 					timer.Interval = delay;
+					timer2.Interval = 50;
 					menu.DrawSettings ();
 					menu.ResetTitle ();
 					menu.OptionSelected = 0;
@@ -203,9 +224,8 @@ namespace MyGame
 				}
 				else if (menu.OptionSelected == 7)
 				{
-					menu.DrawSettingMusic();
+					menu.DrawSettingMusic ();
 				}
-
 				else if (menu.OptionSelected == 15)
 				{
 					currentState = GameState.ViewingCredits;
@@ -213,7 +233,72 @@ namespace MyGame
 				}
 				else if (menu.OptionSelected == 16)
 				{
-					SwinGame.DrawBitmap("GameInstructionnew.png", 460, 245);
+					SwinGame.DrawBitmap ("GameInstructionnew.png", 460, 245);
+				}
+				else if (menu.OptionSelected == 20)
+				{
+					timer2.Stop ();
+					delay = time;
+					s.Head.X = 4;
+					s.Head.Y = 5;
+					delay = resetsetting;
+					time = resetsetting;
+					f.GenerateRanLevel1 (w);
+					s.Direction = DirectionEnum.Right;
+					currentState = GameState.AnnouceGame;
+					previouState = GameState.Level1;
+					SwinGame.FadeMusicOut (2500);
+					menu.OptionSelected = 0;
+					p.GenerateRanPowerUpLevel1 (w,previouState);
+				}
+				else if (menu.OptionSelected == 21)
+				{
+					timer2.Stop ();
+					delay = time;
+					s.Head.X = 10;
+					s.Head.Y = 10;
+					delay = resetsetting;
+					time = resetsetting;
+					f.GenerateRanLevel2 ( w);
+					s.Direction = DirectionEnum.Down;
+					currentState = GameState.AnnouceGame;
+					previouState = GameState.Level2;
+					SwinGame.FadeMusicOut (2500);
+					menu.OptionSelected = 0;
+					p.GenerateRanPowerUpLevel2 (w,previouState);
+				}
+				else if (menu.OptionSelected == 22)
+				{
+					timer2.Stop ();
+					delay = time;
+					s.Head.X = 16;
+					s.Head.Y = 16;
+					delay = resetsetting;
+					time = resetsetting;
+					f.GenerateRanLevel3 ( w);
+					s.Direction = DirectionEnum.Left;
+					currentState = GameState.AnnouceGame;
+					previouState = GameState.Level3;
+					SwinGame.FadeMusicOut (2500);
+					menu.OptionSelected = 0;
+					p.GenerateRanPowerUpLevel3 (w,previouState);
+				}
+				else if (menu.OptionSelected == 23)
+				{
+					timer2.Stop ();
+					delay = time;
+					s.Head.X = 15;
+					s.Head.Y = 11;
+					delay = 50;
+					time = 50;
+					f.GenerateRanLevel3 ( w);
+					timer.Interval = 50;
+					s.Direction = DirectionEnum.Right;
+					currentState = GameState.AnnouceGame;
+					previouState = GameState.Level0;
+					SwinGame.FadeMusicOut (2500);
+					menu.OptionSelected = 0;
+					p.GenerateRanPowerUpLevel3 (w,previouState);
 				}
 				delaytitle += timetitle;
 								
@@ -273,6 +358,11 @@ namespace MyGame
 					SwinGame.StopMusic ();
 					SwinGame.SetMusicVolume (1F);
 					SwinGame.PlayMusic ("Lotus Land.mp3");
+					menu.music = 1;
+					if (menu.Mute == 1)
+					{
+						SwinGame.PauseMusic ();
+					}
 					currentState = GameState.ViewingMenu;
 					menu.ResetTitle ();
 					s.ResetSnake ();
@@ -332,13 +422,13 @@ namespace MyGame
 
 				}
 
-				if (show3 == true) {
-					SwinGame.DrawBitmap ("plus3.png", 340, 30);
+				/*if (show3 == true) {
+
 				}
 
 				if (powerupcounter > 0) {
 					show3 = false;
-				}
+				}*/
 
 
 
@@ -524,16 +614,14 @@ namespace MyGame
 
 				}
 
-				if (show3 == true) {
+				/*if (show3 == true) {
 					SwinGame.DrawBitmap ("plus3.png", 340, 30);
 				}
 
 				if (powerupcounter > 0) {
 					show3 = false;
-				}
-
-
-
+				}*/
+					
 
 				s.DrawInvert ();
 				f.Draw ();
@@ -596,7 +684,11 @@ namespace MyGame
 				delaytitle = timetitle;
 				timer.Interval = resetsetting;
 				HandleUserGameOverInput ();
-
+				menu.music = 1;
+				if (menu.Mute == 1)
+				{
+					SwinGame.PauseMusic ();
+				}
 				powerupcounter = 0;
 				multiplyfruit2 = false;
 				multiplyfruit3 = false;
@@ -604,7 +696,6 @@ namespace MyGame
 			else if (currentState == GameState.AnnouceGame)
 			{
 				int i = 0;
-
 				if (previouState == GameState.Level1)
 				{
 					level.Drawlevel1 ();
@@ -634,7 +725,7 @@ namespace MyGame
 						i++;
 						SwinGame.RefreshScreen (60);
 					}
-
+					SwinGame.StopMusic ();
 					if (previouState == GameState.Level1)
 					{
 						SwinGame.SetMusicVolume (0.7F);
@@ -659,9 +750,14 @@ namespace MyGame
 						i++;
 						SwinGame.RefreshScreen (60);
 					}
+					SwinGame.StopMusic ();
 					SwinGame.Delay (1000);
-					SwinGame.SetMusicVolume (0.8F);
+					SwinGame.SetMusicVolume (0.7F);
 					SwinGame.PlayMusic ("megalovania snake.mp3");
+				}
+				if (menu.Mute == 1)
+				{
+					SwinGame.PauseMusic ();
 				}
 				currentState = previouState;
 
@@ -966,8 +1062,10 @@ namespace MyGame
 				s.ResetSnake ();
 				s.Head.X = 10;
 				s.Head.Y = 10;
+				s.Direction = DirectionEnum.Down;
 				delay = resetsetting;
 				time = resetsetting;
+				timer.Interval = resetsetting;
 				f.GenerateRanLevel2 ( w);
 				currentState = GameState.AnnouceGame;
 				previouState = GameState.Level2;
@@ -984,10 +1082,12 @@ namespace MyGame
 				SwinGame.Delay (2000);
 				counter = 0;
 				s.ResetSnake ();
-				s.Head.X = 8;
-				s.Head.Y = 10;
+				s.Head.X = 16;
+				s.Head.Y = 16;
+				s.Direction = DirectionEnum.Left;
 				delay = resetsetting;
 				time = resetsetting;
+				timer.Interval = resetsetting;
 				f.GenerateRanLevel3 ( w);
 				currentState = GameState.AnnouceGame;
 				previouState = GameState.Level3;
@@ -1019,6 +1119,7 @@ namespace MyGame
 				powerupcounter = 0;
 				multiplyfruit2 = false;
 				multiplyfruit3 = false;
+				p.GenerateRanPowerUpLevel3 (w,currentState);
 			}
 			else if (counter >= level0limit && currentState == GameState.Level0)
 			{
@@ -1027,6 +1128,10 @@ namespace MyGame
 				int i = 0;
 				SwinGame.SetMusicVolume (0.7F);
 				SwinGame.PlayMusic ("Maple Dream.mp3");
+				if (menu.Mute == 1)
+				{
+					SwinGame.PauseMusic ();
+				}
 				menu.ResetTitle ();
 				while (i < 20)
 				{
@@ -1047,6 +1152,8 @@ namespace MyGame
 				powerupcounter = 0;
 				multiplyfruit2 = false;
 				multiplyfruit3 = false;
+
+				win = 1;
 			}
 			else if (previouState == GameState.Level0 && currentState == GameState.GameOver)
 			{
@@ -1055,7 +1162,7 @@ namespace MyGame
 			}
 			else if (previouState != GameState.Level0 && currentState == GameState.GameOver)
 			{
-				SwinGame.SetMusicVolume (1F);
+				SwinGame.SetMusicVolume (1.2F);
 				SwinGame.PlayMusic ("game over.mp3", 0);
 			}
 		}
@@ -1078,24 +1185,35 @@ namespace MyGame
 			{
 				for (int i = 0; i < 32; i++)
 				{
-					SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, i * 40, Counter_Top + 2);
+					SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, i * 40, Counter_Top);
 					SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, i * 40, 23 * 25);
 				}
 
 				for (int i = 0; i < 23; i++)
 				{
 					SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, 0, i * 25);
-					SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, 31 * 25-10, i * 25);
+					SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, 31 * 25 - 10, i * 25);
 				}
 			}
-			else if (currentState == GameState.Level0 && counter >= 40)
+			else if (currentState == GameState.Level0 && counter >= 40 && counter < 45)
 			{
 				for (int i = 0; i < 32; i++)
 				{
 
 					for (int y = 0; y < 25; y++)
 					{
-						SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, i * 45, y *25);
+						SwinGame.DrawText ((counter + "/" + level0limit), Color.Red, i * 45, y * 25);
+					}
+
+				}
+			}
+			else if (currentState == GameState.Level0 && counter >= 45)
+			{
+				for (int i = 0; i < 32; i++)
+				{
+					for (int y = 0; y < 25; y++)
+					{
+						SwinGame.DrawText ("YOU DIED", Color.Red, i * 45, y * 25);
 					}
 
 				}
@@ -1227,13 +1345,7 @@ namespace MyGame
 		{
 			if (s.Head.X == p.X & s.Head.Y == p.Y && p.PowerUpID == 1) {
 
-				Random Rand = new Random ();
-				storeRandPowerUp = (Rand.Next (0, 2));
-
-				if (storeRandPowerUp == 0) {
-
-
-
+	
 					p.GenerateRanPowerUpLevel1 (w,currentState);
 					powerupcounter = 0;
 
@@ -1247,21 +1359,7 @@ namespace MyGame
 						timer.Interval = 35;
 						timer.Interval = 35;
 					}
-
-
-				} else {
-
-					Counter ();
-					Counter ();
-					Counter ();
-					show3 = true;
-
-					ResetSpeedLevel1 ();
-
-					p.GenerateRanPowerUpLevel1 (w,currentState);
-					powerupcounter = 0;
-				}
-
+					
 				powerUpDecider = (randPowerup.Next (10, 20));
 
 
@@ -1270,15 +1368,15 @@ namespace MyGame
 			} else if (s.Head.X == p.X & s.Head.Y == p.Y && p.PowerUpID == 2) {
 
 
-				if (DifficultyPowerups == 1 ) {
-					time = 140;
-					timer.Interval = 140;
+				if (DifficultyPowerups == 1) {
+					time = 120;
+					timer.Interval = 120;
 				} else if (DifficultyPowerups == 2) {
-					timer.Interval = 120;
-					timer.Interval = 120;
-				} else if (DifficultyPowerups == 3 ) {
-					timer.Interval = 90;
-					timer.Interval = 90;
+					timer.Interval = 100;
+					timer.Interval = 100;
+				} else if (DifficultyPowerups == 3) {
+					timer.Interval = 70;
+					timer.Interval = 70;
 				}
 				p.GenerateRanPowerUpLevel1 (w,currentState);
 				powerupcounter = 0;
@@ -1308,7 +1406,6 @@ namespace MyGame
 					s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
 				} else if (s.SnakeParts.Count > 1) {
 					s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
-
 				}
 				p.GenerateRanPowerUpLevel1 (w,currentState);
 				powerupcounter = 0;
@@ -1321,28 +1418,28 @@ namespace MyGame
 				SwinGame.PlaySoundEffect ("bump.aiff", 0.6F);
 				questionDeicider = (randPowerup.Next (1, 7));
 
-				if (questionDeicider == 1) {
+				if (questionDeicider == 1)
+				{
 
-					Counter ();
-					Counter ();
-					Counter ();
-					show3 = true;
-					ResetSpeedLevel1 ();
-
-				} else if (questionDeicider == 2) {
-
-					if (DifficultyPowerups == 1) {
-						time = 140;
-						timer.Interval = 140;
-					} else if (DifficultyPowerups == 2) {
+					if (DifficultyPowerups == 1)
+					{
+						time = 120;
 						timer.Interval = 120;
-						timer.Interval = 120;
-					} else if (DifficultyPowerups == 3) {
-						timer.Interval = 90;
-						timer.Interval = 90;
+					}
+					else if (DifficultyPowerups == 2)
+					{
+						timer.Interval = 100;
+						timer.Interval = 100;
+					}
+					else if (DifficultyPowerups == 3)
+					{
+						timer.Interval = 70;
+						timer.Interval = 70;
 					}
 
-				} else if (questionDeicider == 3) {
+				}
+				else if (questionDeicider == 2)
+				{
 					
 					s.IncreaseLenght ();
 					s.IncreaseLenght ();
@@ -1351,40 +1448,63 @@ namespace MyGame
 					ResetSpeedLevel1 ();
 
 
-				} else if (questionDeicider == 4) {
+				}
+				else if (questionDeicider == 3)
+				{
 					multiplyfruit2 = true;
 					multiplyfruit3 = true;
 					ResetSpeedLevel1 ();
 
-				} else if (questionDeicider == 5) {
 
-					p.GenerateRanPowerUpLevel1 (w,currentState);
-					powerupcounter = 0;
-					powerUpDecider = (randPowerup.Next (10, 20));
-					ResetSpeedLevel1 ();
-
-				} else if (questionDeicider == 6) {
-					if (DifficultyPowerups == 1) {
+				}
+				else if (questionDeicider == 4)
+				{
+					if (DifficultyPowerups == 1)
+					{
 						time = 70;
 						timer.Interval = 70;
-					} else if (DifficultyPowerups == 2) {
+					}
+					else if (DifficultyPowerups == 2)
+					{
 						timer.Interval = 50;
 						timer.Interval = 50;
-					} else if (DifficultyPowerups == 3) {
+					}
+					else if (DifficultyPowerups == 3)
+					{
 						timer.Interval = 35;
 						timer.Interval = 35;
 					}
 
 				}
-
-
-
+				else if (questionDeicider == 5)
+				{
+					if (s.SnakeParts.Count > 3)
+					{
+						s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
+						s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
+						s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
+					}
+					else if (s.SnakeParts.Count > 2)
+					{
+						s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
+						s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
+					}
+					else if (s.SnakeParts.Count > 1)
+					{
+						s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
+					}
+				}
+				else if (questionDeicider == 6)
+				{
+					p.GenerateRanPowerUpLevel1 (w,currentState);
+					powerupcounter = 0;
+					powerUpDecider = (randPowerup.Next (10, 20));
+					ResetSpeedLevel1 ();
+				}
+					
 				powerupcounter = 0;
 				p.GenerateRanPowerUpLevel1 (w,currentState);
 				powerUpDecider = (randPowerup.Next (10, 20));
-
-
-
 
 			}
 

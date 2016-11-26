@@ -10,6 +10,7 @@ namespace MyGame
 		private int i;
 		private int y;
 		private int mute=0;
+		public int music=1;
 		private Snake s = new Snake();
 		private Snake n = new Snake();
 		private Snake a = new Snake();
@@ -236,35 +237,38 @@ namespace MyGame
 			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 355, 5 * TileWidth, TileHeight) && i == 7)
 			{
 				//title
-				y = 4;
+				music = 1;
+				SwinGame.SetMusicVolume (1F);
 				SwinGame.PlayMusic ("Lotus Land.mp3");
 				return 7;
 			}
 			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 385, 5 * TileWidth, TileHeight) && i == 7)
 			{
 				//Level1
-				y = 5;
+				music = 2;
+				SwinGame.SetMusicVolume (0.8F);
 				SwinGame.PlayMusic ("Selene Light.mp3");
 				return 7;
 			}
 			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 415, 5 * TileWidth, TileHeight) && i == 7)
 			{
 				//Level2
-				y = 6;
+				music = 3;
+				SwinGame.SetMusicVolume (0.8F);
 				SwinGame.PlayMusic ("Eternal Shrine Maiden.mp3");
 				return 7;
 			}
 			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 445, 5 * TileWidth, TileHeight) && i == 7)
 			{
 				//Level3
-				y = 7;
+				music = 4;
+				SwinGame.SetMusicVolume (0.8F);
 				SwinGame.PlayMusic ("Alice Maestra.mp3");
 				return 7;
 			}
 			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 475, 5 * TileWidth, TileHeight) && i == 7)
 			{
 				//Mute
-				y = 8;
 				if (mute == 0)
 				{
 					SwinGame.PauseMusic ();
@@ -277,6 +281,26 @@ namespace MyGame
 					mute = 0;
 				}
 				return 7;
+			}
+			if (SwinGame.PointInRect (pt, 20 * TileWidth, 240, 5 * TileWidth, TileHeight + 5)&& i == 1)
+			{
+				//level1
+				return 20;
+			}
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 280, 5 * TileWidth, TileHeight + 5)&& i == 1)
+			{
+				//level2
+				return 21;
+			}
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 320, 5 * TileWidth, TileHeight + 5)&& i == 1)
+			{
+				//level3
+				return 22;
+			}
+			else if (SwinGame.PointInRect (pt, 20 * TileWidth, 360, 5 * TileWidth, TileHeight+5)&& i == 1)
+			{
+				//level0
+				return 23;
 			}
 			else
 			{
@@ -313,25 +337,42 @@ namespace MyGame
 			//SwinGame.DrawText ("Hard", Color.Red, 550, 435);
 		}
 
+
+		public void DrawLevelSelect()
+		{
+
+			SwinGame.FillRectangle (Color.DarkBlue, 20 * TileWidth, 240, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.DarkBlue, 20 * TileWidth, 280, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.DarkBlue, 20 * TileWidth, 320, 5*TileWidth, TileHeight+5);
+			SwinGame.FillRectangle (Color.Black, 20 * TileWidth, 360, 5*TileWidth, TileHeight+5);
+
+			SwinGame.DrawBitmap ("Lvl1.png", 526, 240);
+			SwinGame.DrawBitmap ("Lvl2.png", 526, 280);
+			SwinGame.DrawBitmap ("Lvl3.png", 526, 320);
+			SwinGame.DrawBitmap ("Lvl0.png", 526, 360);
+
+		}
+
 		public void DrawSettingMusic()
 		{
-			if (y == 4)
+			if (music == 1)
 			{
 				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 355 - 4, (5 * TileWidth) + 8, TileWidth + 8);
 			}
-			else if (y == 5)
+			else if (music == 2)
 			{
 				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 385 - 4, (5 * TileWidth) + 8, TileWidth + 8);
 			}
-			else if (y == 6)
+			else if (music == 3)
 			{
 				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 415 - 4, (5 * TileWidth) + 8, TileWidth + 8);
 			}
-			else if (y == 7)
+			else if (music == 4)
 			{
 				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 445 - 4, (5 * TileWidth) + 8, TileWidth + 8);
 			}
-			else if (y == 8)
+
+			if (mute == 1)
 			{
 				SwinGame.FillRectangle (Color.Red, 20 * TileWidth - 4, 475 - 4, (5 * TileWidth) + 8, TileWidth + 8);
 			}
