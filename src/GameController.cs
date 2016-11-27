@@ -1213,7 +1213,7 @@ namespace MyGame
 				{
 					for (int y = 0; y < 25; y++)
 					{
-						SwinGame.DrawText ("YOU DIED", Color.Red, i * 45, y * 25);
+						SwinGame.DrawText ("YOU DIED", Color.Red, i * 70, y * 25);
 					}
 
 				}
