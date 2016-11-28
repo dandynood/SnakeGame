@@ -1,5 +1,6 @@
-﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default" StartupItem="MyGame.csproj">
+﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
+  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
@@ -11,12 +12,11 @@
       <File FileName="src\SnakePart.cs" Line="1" Column="1" />
       <File FileName="src\DirectionEnum.cs" Line="1" Column="1" />
       <File FileName="src\MenuController.cs" Line="1" Column="1" />
-      <File FileName="src\GameController.cs" Line="51" Column="14" />
+      <File FileName="src\GameController.cs" Line="1410" Column="31" />
       <File FileName="src\PowerUp.cs" Line="1" Column="1" />
       <File FileName="src\Fruit.cs" Line="1" Column="1" />
       <File FileName="src\GameMain.cs" Line="1" Column="1" />
       <File FileName="src\GameState.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

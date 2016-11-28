@@ -79,7 +79,7 @@ namespace MyGame
 			f2.I = (randPowerup.Next (0, 7));
 
 
-			p.GenerateRanPowerUpLevel1 (w,currentState);
+			p.GenerateRanPowerUpLevel3 (w,currentState);
 
 		
 			powerUpDecider = (randPowerup.Next (10, 20));
@@ -415,7 +415,7 @@ namespace MyGame
 
 				if (deletePowerUps > 10) {
 
-					p.GenerateRanPowerUpLevel1 (w,currentState);
+					p.GenerateRanPowerUpLevel3 (w,currentState);
 					powerupcounter = 0;
 					powerUpDecider = (randPowerup.Next (10, 20));
 					deletePowerUps = 0;
@@ -477,7 +477,7 @@ namespace MyGame
 
 				if (deletePowerUps > 10) {
 
-					p.GenerateRanPowerUpLevel2 (w,currentState);
+					p.GenerateRanPowerUpLevel3 (w,currentState);
 					powerupcounter = 0;
 					powerUpDecider = (randPowerup.Next (10, 20));
 					deletePowerUps = 0;
@@ -1332,7 +1332,7 @@ namespace MyGame
 			if (s.Head.X == p.X & s.Head.Y == p.Y && p.PowerUpID == 3) {
 				multiplyfruit2 = true;
 				multiplyfruit3 = true;
-				p.GenerateRanPowerUpLevel1 (w,currentState);
+				p.GenerateRanPowerUpLevel3(w,currentState);
 				powerupcounter = 0;
 				powerUpDecider = (randPowerup.Next (10, 20));
 				SwinGame.PlaySoundEffect ("bump.aiff", 0.6F);
@@ -1346,7 +1346,7 @@ namespace MyGame
 			if (s.Head.X == p.X & s.Head.Y == p.Y && p.PowerUpID == 1) {
 
 	
-					p.GenerateRanPowerUpLevel1 (w,currentState);
+					p.GenerateRanPowerUpLevel3 (w,currentState);
 					powerupcounter = 0;
 
 					if (DifficultyPowerups == 1 ) {
@@ -1378,7 +1378,7 @@ namespace MyGame
 					timer.Interval = 70;
 					timer.Interval = 70;
 				}
-				p.GenerateRanPowerUpLevel1 (w,currentState);
+				p.GenerateRanPowerUpLevel3 (w,currentState);
 				powerupcounter = 0;
 				powerUpDecider = (randPowerup.Next (10, 20));
 			
@@ -1388,7 +1388,7 @@ namespace MyGame
 
 				multiplyfruit2 = true;
 				multiplyfruit3 = true;
-				p.GenerateRanPowerUpLevel1 (w,currentState);
+				p.GenerateRanPowerUpLevel3 (w,currentState);
 				powerupcounter = 0;
 				powerUpDecider = (randPowerup.Next (10, 20));
 				ResetSpeedLevel1 ();
@@ -1407,7 +1407,7 @@ namespace MyGame
 				} else if (s.SnakeParts.Count > 1) {
 					s.SnakeParts.RemoveAt (s.SnakeParts.Count - 1);
 				}
-				p.GenerateRanPowerUpLevel1 (w,currentState);
+				p.GenerateRanPowerUpLevel3 (w,currentState);
 				powerupcounter = 0;
 				powerUpDecider = (randPowerup.Next (10, 20));
 				ResetSpeedLevel1 ();
@@ -1496,14 +1496,14 @@ namespace MyGame
 				}
 				else if (questionDeicider == 6)
 				{
-					p.GenerateRanPowerUpLevel1 (w,currentState);
+					p.GenerateRanPowerUpLevel3 (w,currentState);
 					powerupcounter = 0;
 					powerUpDecider = (randPowerup.Next (10, 20));
 					ResetSpeedLevel1 ();
 				}
 					
 				powerupcounter = 0;
-				p.GenerateRanPowerUpLevel1 (w,currentState);
+				p.GenerateRanPowerUpLevel3 (w,currentState);
 				powerUpDecider = (randPowerup.Next (10, 20));
 
 			}
@@ -1518,13 +1518,8 @@ namespace MyGame
 			if (s.Head.X == f2.X && s.Head.Y == f2.Y) {
 				s.IncreaseLenght ();
 
-				if (currentState == GameState.Level1) {
-					f2.GenerateRanLevel1 (w);
-				} else if (currentState == GameState.Level2) {
-					f2.GenerateRanLevel2 (w);
-				} else if (currentState == GameState.Level3) {
-					f2.GenerateRanLevel3 (w);
-				}
+				f2.GenerateRanLevel3 (w);
+
 
 				Counter ();
 				multiplyfruit2 = false;
@@ -1579,13 +1574,9 @@ namespace MyGame
 			if (s.Head.X == f3.X && s.Head.Y == f3.Y) {
 				s.IncreaseLenght ();
 
-				if (currentState == GameState.Level1) {
-					f3.GenerateRanLevel1 (w);
-				} else if (currentState == GameState.Level2) {
-					f3.GenerateRanLevel2 (w);
-				} else if (currentState == GameState.Level3) {
-					f3.GenerateRanLevel3 (w);
-				}
+			
+				f3.GenerateRanLevel3 (w);
+
 
 				Counter ();
 				multiplyfruit3 = false;
